@@ -1,0 +1,4 @@
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\bin\Debug\Domain.UTL.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\bin\Debug\Domain.UTL.pdb
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.pdb

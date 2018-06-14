@@ -1,0 +1,11 @@
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Application.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Application.pdb
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.Entities.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.UTL.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.Entities.pdb
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.UTL.pdb
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\bin\Debug\Domain.pdb
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\obj\Debug\Application.dll
+C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Application\obj\Debug\Application.pdb

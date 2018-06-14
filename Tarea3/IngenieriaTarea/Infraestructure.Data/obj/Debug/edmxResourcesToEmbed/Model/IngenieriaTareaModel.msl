@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_tarea3_pruebaModelStoreContainer" CdmEntityContainer="db_tarea3_pruebaEntities">
+    <EntitySetMapping Name="tbPerson">
+      <EntityTypeMapping TypeName="db_tarea3_pruebaModel.tbPerson">
+        <MappingFragment StoreEntitySet="tbPerson">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
