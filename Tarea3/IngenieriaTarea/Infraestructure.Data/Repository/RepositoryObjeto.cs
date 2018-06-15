@@ -4,27 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Infraestructure.Data.Repository
 {
-    public class RepositoryPerson : IRepositoryPerson
+    public class RepositoryObjeto : IRepositoryObjeto
     {
         #region
         private readonly db_b51795_b51330Entities SS_Context;
         #endregion
 
-        public RepositoryPerson()
+        public RepositoryObjeto()
         {
             SS_Context = new db_b51795_b51330Entities();
         }
 
-        public tb_persona AddPerson(tb_persona person)
+        public tb_objeto AddObjeto(tb_objeto objeto)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Add(person);
+                SS_Context.tb_objeto.Add(objeto);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -33,18 +35,18 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return objeto;
         }
 
-        public bool DeletePerson(tb_persona person)
+        public bool DeleteObjeto(tb_objeto objeto)
         {
 
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Attach(person);
-                SS_Context.tb_persona.Remove(person);
+                SS_Context.tb_objeto.Attach(objeto);
+                SS_Context.tb_objeto.Remove(objeto);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -57,42 +59,42 @@ namespace Infraestructure.Data.Repository
 
         }
 
-        public List<tb_persona> GetPerson()
+        public List<tb_objeto> GetObjeto()
         {
-            List<tb_persona> personaList = new List<tb_persona>();
+            List<tb_objeto> objetoList = new List<tb_objeto>();
             try
             {
-                personaList = (from list in SS_Context.tb_persona select list).ToList<tb_persona>();
+                objetoList = (from list in SS_Context.tb_objeto select list).ToList<tb_objeto>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return personaList;
+            return objetoList;
         }
 
-        public tb_persona GetPersonById(tb_persona person)
+        public tb_objeto GetObjetoById(tb_objeto objeto)
         {
-            tb_persona tempPerson = new tb_persona();
+            tb_objeto tempObjeto = new tb_objeto();
             try
             {
-                tempPerson = (from personaList in SS_Context.tb_persona where personaList.id == person.id select personaList).Single<tb_persona>();
+                tempObjeto = (from objetoList in SS_Context.tb_objeto where objetoList.id == objeto.id select objetoList).Single<tb_objeto>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return tempPerson;
+            return tempObjeto;
         }
 
-        public tb_persona UpdatePerson(tb_persona person)
+        public tb_objeto UpdateObjeto(tb_objeto objeto)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                var entity = SS_Context.tb_persona.Find(person.id);
-                SS_Context.Entry(entity).CurrentValues.SetValues(person);
+                var entity = SS_Context.tb_objeto.Find(objeto.id);
+                SS_Context.Entry(entity).CurrentValues.SetValues(objeto);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -101,7 +103,7 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return objeto;
         }
     }
 }

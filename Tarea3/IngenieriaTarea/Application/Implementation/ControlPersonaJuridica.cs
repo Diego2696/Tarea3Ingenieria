@@ -11,24 +11,24 @@ using System.Threading.Tasks;
 
 namespace Application.Implementation
 {
-    public class ControlPerson : IControlPerson
+    public class ControlPersonaJuridica : IControlPersonaJuridica
     {
         #region
-        private readonly IRepositoryPerson DomainPersona;
+        private readonly IRepositoryPersonaJuridica DomainPersonaJuridica;
         #endregion
 
-        public ControlPerson()
+        public ControlPersonaJuridica()
         {
-            DomainPersona = new RepositoryPerson();
+            DomainPersonaJuridica = new RepositoryPersonaJuridica();
         }
 
-        public Response<List<tb_persona>> lfGet()
+        public Response<List<tb_persona_juridica>> lfGet()
         {
-            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
+            Response<List<tb_persona_juridica>> response = new Response<List<tb_persona_juridica>>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPerson();
+                response.ReturnValue = DomainPersonaJuridica.GetPersonaJuridica();
             }
             catch (Exception ex)
             {
@@ -39,13 +39,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfGet(int idTemp)
+        public Response<tb_persona_juridica> lfGet(int idTemp)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_persona_juridica> response = new Response<tb_persona_juridica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPersonById(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainPersonaJuridica.GetPersonaJuridicaById(new tb_persona_juridica { id = idTemp });
             }
             catch (Exception ex)
             {
@@ -56,13 +56,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfInsert(tb_persona persona)
+        public Response<tb_persona_juridica> lfInsert(tb_persona_juridica personaJuridica)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_persona_juridica> response = new Response<tb_persona_juridica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.AddPerson(persona);
+                response.ReturnValue = DomainPersonaJuridica.AddPersonaJuridica(personaJuridica);
             }
             catch (Exception ex)
             {
@@ -73,13 +73,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfUpdate(tb_persona persona)
+        public Response<tb_persona_juridica> lfUpdate(tb_persona_juridica personaJuridica)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_persona_juridica> response = new Response<tb_persona_juridica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.UpdatePerson(persona);
+                response.ReturnValue = DomainPersonaJuridica.UpdatePersonaJuridica(personaJuridica);
             }
             catch (Exception ex)
             {
@@ -95,7 +95,7 @@ namespace Application.Implementation
             Response<bool> response = new Response<bool>();
             try
             {
-                response.ReturnValue = DomainPersona.DeletePerson(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainPersonaJuridica.DeletePersonaJuridica(new tb_persona_juridica { id = idTemp });
             }
             catch (Exception ex)
             {

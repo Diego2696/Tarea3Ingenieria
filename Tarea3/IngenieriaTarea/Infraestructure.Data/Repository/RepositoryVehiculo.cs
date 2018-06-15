@@ -4,27 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Infraestructure.Data.Repository
 {
-    public class RepositoryPerson : IRepositoryPerson
+    public class RepositoryVehiculo : IRepositoryVehiculo
     {
         #region
         private readonly db_b51795_b51330Entities SS_Context;
         #endregion
 
-        public RepositoryPerson()
+        public RepositoryVehiculo()
         {
             SS_Context = new db_b51795_b51330Entities();
         }
 
-        public tb_persona AddPerson(tb_persona person)
+        public tb_vehiculo AddVehiculo(tb_vehiculo vehiculo)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Add(person);
+                SS_Context.tb_vehiculo.Add(vehiculo);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -33,18 +35,18 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return vehiculo;
         }
 
-        public bool DeletePerson(tb_persona person)
+        public bool DeleteVehiculo(tb_vehiculo vehiculo)
         {
 
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Attach(person);
-                SS_Context.tb_persona.Remove(person);
+                SS_Context.tb_vehiculo.Attach(vehiculo);
+                SS_Context.tb_vehiculo.Remove(vehiculo);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -57,42 +59,42 @@ namespace Infraestructure.Data.Repository
 
         }
 
-        public List<tb_persona> GetPerson()
+        public List<tb_vehiculo> GetVehiculo()
         {
-            List<tb_persona> personaList = new List<tb_persona>();
+            List<tb_vehiculo> vehiculoList = new List<tb_vehiculo>();
             try
             {
-                personaList = (from list in SS_Context.tb_persona select list).ToList<tb_persona>();
+                vehiculoList = (from list in SS_Context.tb_vehiculo select list).ToList<tb_vehiculo>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return personaList;
+            return vehiculoList;
         }
 
-        public tb_persona GetPersonById(tb_persona person)
+        public tb_vehiculo GetVehiculoById(tb_vehiculo vehiculo)
         {
-            tb_persona tempPerson = new tb_persona();
+            tb_vehiculo tempVehiculo = new tb_vehiculo();
             try
             {
-                tempPerson = (from personaList in SS_Context.tb_persona where personaList.id == person.id select personaList).Single<tb_persona>();
+                tempVehiculo = (from objetoList in SS_Context.tb_vehiculo where objetoList.id == vehiculo.id select objetoList).Single<tb_vehiculo>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return tempPerson;
+            return tempVehiculo;
         }
 
-        public tb_persona UpdatePerson(tb_persona person)
+        public tb_vehiculo UpdateVehiculo(tb_vehiculo vehiculo)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                var entity = SS_Context.tb_persona.Find(person.id);
-                SS_Context.Entry(entity).CurrentValues.SetValues(person);
+                var entity = SS_Context.tb_vehiculo.Find(vehiculo.id);
+                SS_Context.Entry(entity).CurrentValues.SetValues(vehiculo);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -101,7 +103,7 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return vehiculo;
         }
     }
 }

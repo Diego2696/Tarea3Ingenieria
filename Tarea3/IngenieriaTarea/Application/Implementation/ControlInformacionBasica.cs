@@ -11,24 +11,24 @@ using System.Threading.Tasks;
 
 namespace Application.Implementation
 {
-    public class ControlPerson : IControlPerson
+    public class ControlInformacionBasica : IControlInformacionBasica
     {
         #region
-        private readonly IRepositoryPerson DomainPersona;
+        private readonly IRepositoryInformacionBasica DomainInfoBasica;
         #endregion
 
-        public ControlPerson()
+        public ControlInformacionBasica()
         {
-            DomainPersona = new RepositoryPerson();
+            DomainInfoBasica = new RepositoryInformacionBasica();
         }
 
-        public Response<List<tb_persona>> lfGet()
+        public Response<List<tb_informacion_basica>> lfGet()
         {
-            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
+            Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPerson();
+                response.ReturnValue = DomainInfoBasica.GetInfoBasica();
             }
             catch (Exception ex)
             {
@@ -39,13 +39,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfGet(int idTemp)
+        public Response<tb_informacion_basica> lfGet(int idTemp)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPersonById(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainInfoBasica.GetInfoBasicaById(new tb_informacion_basica { id = idTemp });
             }
             catch (Exception ex)
             {
@@ -56,13 +56,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfInsert(tb_persona persona)
+        public Response<tb_informacion_basica> lfInsert(tb_informacion_basica infoBasica)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.AddPerson(persona);
+                response.ReturnValue = DomainInfoBasica.AddInfoBasica(infoBasica);
             }
             catch (Exception ex)
             {
@@ -73,13 +73,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfUpdate(tb_persona persona)
+        public Response<tb_informacion_basica> lfUpdate(tb_informacion_basica infoBasica)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
 
             try
             {
-                response.ReturnValue = DomainPersona.UpdatePerson(persona);
+                response.ReturnValue = DomainInfoBasica.UpdateInfoBasica(infoBasica);
             }
             catch (Exception ex)
             {
@@ -95,7 +95,7 @@ namespace Application.Implementation
             Response<bool> response = new Response<bool>();
             try
             {
-                response.ReturnValue = DomainPersona.DeletePerson(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainInfoBasica.DeleteInfoBasica(new tb_informacion_basica { id = idTemp });
             }
             catch (Exception ex)
             {

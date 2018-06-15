@@ -13,19 +13,19 @@ using System;
 
 namespace IngenieriaTarea.Controllers
 {
-    [RoutePrefix("api/person")]
+    [RoutePrefix("api/persona")]
     public class PersonController : ApiController
     {
         [Route("")]
         [HttpGet]
         [ResponseType(typeof(Response<List<tb_persona>>))]
-        public IHttpActionResult GetPerson()
+        public IHttpActionResult GetPersona()
         {
             Response<List<tb_persona>> response = new Response<List<tb_persona>>();
 
-            var userLN = FactoryIoC.Container.Resolver<ControlPerson>();
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
 
-            return Json(userLN.lfGet(), new JsonSerializerSettings()
+            return Json(controlPersona.lfGet(), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented
@@ -35,13 +35,13 @@ namespace IngenieriaTarea.Controllers
         [Route("{id}")]
         [HttpGet]
         [ResponseType(typeof(Response<tb_persona>))]
-        public IHttpActionResult GetPerson(int id)
+        public IHttpActionResult GetPersona(int id)
         {
             Response<tb_persona> response = new Response<tb_persona>();
 
-            var userLN = FactoryIoC.Container.Resolver<ControlPerson>();
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
 
-            return Json(userLN.lfGet(id), new JsonSerializerSettings()
+            return Json(controlPersona.lfGet(id), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented
@@ -51,13 +51,13 @@ namespace IngenieriaTarea.Controllers
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
-        public IHttpActionResult DeletePerson(int id)
+        public IHttpActionResult DeletePersona(int id)
         {
             Response<Boolean> response = new Response<bool>();
 
-            var userLN = FactoryIoC.Container.Resolver<ControlPerson>();
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
 
-            return Json(userLN.lfDelete(id), new JsonSerializerSettings()
+            return Json(controlPersona.lfDelete(id), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented
@@ -67,12 +67,12 @@ namespace IngenieriaTarea.Controllers
         [Route("")]
         [HttpPost]
         [ResponseType(typeof(Response<tb_persona>))]
-        public IHttpActionResult InsertPerson([FromBody]tb_persona user)
+        public IHttpActionResult InsertPersona([FromBody]tb_persona persona)
         {
 
-            ControlPerson userLN = FactoryIoC.Container.Resolver<ControlPerson>();
+            ControlPerson controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
 
-            return Json(userLN.lfInsert(user), new JsonSerializerSettings()
+            return Json(controlPersona.lfInsert(persona), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented
@@ -82,11 +82,11 @@ namespace IngenieriaTarea.Controllers
         [Route("")]
         [HttpPut]
         [ResponseType(typeof(Response<tb_persona>))]
-        public IHttpActionResult UpdatePerson([FromBody]tb_persona user)
+        public IHttpActionResult UpdatePersona([FromBody]tb_persona persona)
         {
-            ControlPerson userLN = FactoryIoC.Container.Resolver<ControlPerson>();
+            ControlPerson controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
 
-            return Json(userLN.lfUpdate(user), new JsonSerializerSettings()
+            return Json(controlPersona.lfUpdate(persona), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented

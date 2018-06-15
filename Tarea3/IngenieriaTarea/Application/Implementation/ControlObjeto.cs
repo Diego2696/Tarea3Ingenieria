@@ -11,24 +11,24 @@ using System.Threading.Tasks;
 
 namespace Application.Implementation
 {
-    public class ControlPerson : IControlPerson
+    public class ControlObjeto : IControlObjeto
     {
         #region
-        private readonly IRepositoryPerson DomainPersona;
+        private readonly IRepositoryObjeto DomainObjeto;
         #endregion
 
-        public ControlPerson()
+        public ControlObjeto()
         {
-            DomainPersona = new RepositoryPerson();
+            DomainObjeto = new RepositoryObjeto();
         }
 
-        public Response<List<tb_persona>> lfGet()
+        public Response<List<tb_objeto>> lfGet()
         {
-            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
+            Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPerson();
+                response.ReturnValue = DomainObjeto.GetObjeto();
             }
             catch (Exception ex)
             {
@@ -39,13 +39,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfGet(int idTemp)
+        public Response<tb_objeto> lfGet(int idTemp)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_objeto> response = new Response<tb_objeto>();
 
             try
             {
-                response.ReturnValue = DomainPersona.GetPersonById(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainObjeto.GetObjetoById(new tb_objeto { id = idTemp });
             }
             catch (Exception ex)
             {
@@ -56,13 +56,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfInsert(tb_persona persona)
+        public Response<tb_objeto> lfInsert(tb_objeto objeto)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_objeto> response = new Response<tb_objeto>();
 
             try
             {
-                response.ReturnValue = DomainPersona.AddPerson(persona);
+                response.ReturnValue = DomainObjeto.AddObjeto(objeto);
             }
             catch (Exception ex)
             {
@@ -73,13 +73,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_persona> lfUpdate(tb_persona persona)
+        public Response<tb_objeto> lfUpdate(tb_objeto objeto)
         {
-            Response<tb_persona> response = new Response<tb_persona>();
+            Response<tb_objeto> response = new Response<tb_objeto>();
 
             try
             {
-                response.ReturnValue = DomainPersona.UpdatePerson(persona);
+                response.ReturnValue = DomainObjeto.UpdateObjeto(objeto);
             }
             catch (Exception ex)
             {
@@ -95,7 +95,7 @@ namespace Application.Implementation
             Response<bool> response = new Response<bool>();
             try
             {
-                response.ReturnValue = DomainPersona.DeletePerson(new tb_persona { id = idTemp });
+                response.ReturnValue = DomainObjeto.DeleteObjeto(new tb_objeto { id = idTemp });
             }
             catch (Exception ex)
             {

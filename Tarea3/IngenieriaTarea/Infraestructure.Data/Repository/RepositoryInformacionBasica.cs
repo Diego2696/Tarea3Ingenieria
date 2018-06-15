@@ -4,27 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Infraestructure.Data.Repository
 {
-    public class RepositoryPerson : IRepositoryPerson
+    public class RepositoryInformacionBasica : IRepositoryInformacionBasica
     {
         #region
         private readonly db_b51795_b51330Entities SS_Context;
         #endregion
 
-        public RepositoryPerson()
+        public RepositoryInformacionBasica()
         {
             SS_Context = new db_b51795_b51330Entities();
         }
 
-        public tb_persona AddPerson(tb_persona person)
+        public tb_informacion_basica AddInfoBasica(tb_informacion_basica infoBasica)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Add(person);
+                SS_Context.tb_informacion_basica.Add(infoBasica);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -33,18 +35,18 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return infoBasica;
         }
 
-        public bool DeletePerson(tb_persona person)
+        public bool DeleteInfoBasica(tb_informacion_basica infoBasica)
         {
 
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                SS_Context.tb_persona.Attach(person);
-                SS_Context.tb_persona.Remove(person);
+                SS_Context.tb_informacion_basica.Attach(infoBasica);
+                SS_Context.tb_informacion_basica.Remove(infoBasica);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -57,42 +59,42 @@ namespace Infraestructure.Data.Repository
 
         }
 
-        public List<tb_persona> GetPerson()
+        public List<tb_informacion_basica> GetInfoBasica()
         {
-            List<tb_persona> personaList = new List<tb_persona>();
+            List<tb_informacion_basica> infoBasicaList = new List<tb_informacion_basica>();
             try
             {
-                personaList = (from list in SS_Context.tb_persona select list).ToList<tb_persona>();
+                infoBasicaList = (from list in SS_Context.tb_informacion_basica select list).ToList<tb_informacion_basica>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return personaList;
+            return infoBasicaList;
         }
 
-        public tb_persona GetPersonById(tb_persona person)
+        public tb_informacion_basica GetInfoBasicaById(tb_informacion_basica infoBasica)
         {
-            tb_persona tempPerson = new tb_persona();
+            tb_informacion_basica tempInfoBasica = new tb_informacion_basica();
             try
             {
-                tempPerson = (from personaList in SS_Context.tb_persona where personaList.id == person.id select personaList).Single<tb_persona>();
+                tempInfoBasica = (from infoBasicaList in SS_Context.tb_informacion_basica where infoBasicaList.id == infoBasica.id select infoBasicaList).Single<tb_informacion_basica>();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
-            return tempPerson;
+            return tempInfoBasica;
         }
 
-        public tb_persona UpdatePerson(tb_persona person)
+        public tb_informacion_basica UpdateInfoBasica(tb_informacion_basica infoBasica)
         {
             DbContextTransaction dbTransaction = SS_Context.Database.BeginTransaction();
 
             try
             {
-                var entity = SS_Context.tb_persona.Find(person.id);
-                SS_Context.Entry(entity).CurrentValues.SetValues(person);
+                var entity = SS_Context.tb_informacion_basica.Find(infoBasica.id);
+                SS_Context.Entry(entity).CurrentValues.SetValues(infoBasica);
                 SS_Context.SaveChanges();
                 dbTransaction.Commit();
             }
@@ -101,7 +103,7 @@ namespace Infraestructure.Data.Repository
                 dbTransaction.Rollback();
                 throw new Exception(ex.ToString());
             }
-            return person;
+            return infoBasica;
         }
     }
 }

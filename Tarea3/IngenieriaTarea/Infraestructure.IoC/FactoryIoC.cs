@@ -21,6 +21,10 @@ namespace Infraestructure.IoC
 
             //Registro de las clases
             _unityContainer.RegisterType<IRepositoryPerson, RepositoryPerson>();
+            _unityContainer.RegisterType<IRepositoryVehiculo, RepositoryVehiculo>();
+            _unityContainer.RegisterType<IRepositoryPersonaJuridica, RepositoryPersonaJuridica>();
+            _unityContainer.RegisterType<IRepositoryObjeto, RepositoryObjeto>();
+            _unityContainer.RegisterType<IRepositoryInformacionBasica, RepositoryInformacionBasica>();
 
         }
 

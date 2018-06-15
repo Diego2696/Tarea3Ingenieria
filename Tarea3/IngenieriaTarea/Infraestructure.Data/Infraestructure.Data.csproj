@@ -62,7 +62,11 @@
       <DependentUpon>IngenieriaTareaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\RepositoryInformacionBasica.cs" />
+    <Compile Include="Repository\RepositoryObjeto.cs" />
     <Compile Include="Repository\RepositoryPerson.cs" />
+    <Compile Include="Repository\RepositoryPersonaJuridica.cs" />
+    <Compile Include="Repository\RepositoryVehiculo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">

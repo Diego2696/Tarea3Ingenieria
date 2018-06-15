@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRepositoryInformacionBasica.cs" />
+    <Compile Include="IRepositoryObjeto.cs" />
     <Compile Include="IRepositoryPerson.cs" />
+    <Compile Include="IRepositoryPersonaJuridica.cs" />
+    <Compile Include="IRepositoryVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
