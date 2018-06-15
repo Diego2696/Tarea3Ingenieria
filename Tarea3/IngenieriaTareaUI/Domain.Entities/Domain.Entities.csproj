@@ -46,18 +46,147 @@
       <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tbPerson.cs">
+    <Compile Include="tb_alias.cs">
       <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_aseguradora.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_caseta.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_categoria_delito.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_clase.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_color.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_delegacion.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_delito_secundario.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_detalle_persona.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_estado.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_estado_civil.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_funcion.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_hecho.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_imagen.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_informacion_basica.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_informacion_imagen.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_intensidad.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_marca.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_modalidad.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_nombre_fantasia.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_objeto.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_oficial_policia.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_oficina_encargado.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_opcion_detalle_persona.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_origen.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_persona.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_persona_juridica.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_placa.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_poblacion_vulnerable.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_policia.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_proyeccion.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_rol.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_subcategoria_delito.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_subgrupo_victima.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_subtipo.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_subvictima.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_tipo.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_tipo_identificacion.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_tipo_muerte.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_tipo_ubicacion.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_unidad.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_valor_opcion_detalle_persona.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_vehiculo.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_victima.cs">
+      <DependentUpon>IngenieriaTareaModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="IngenieriaTareaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IngenieriaTareaModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

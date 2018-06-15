@@ -17,43 +17,43 @@ namespace IngenieriaTareaUI.Controllers
         // GET: User
         public async Task<ActionResult> Index()
         {
-            List<tbPerson> userList = new List<tbPerson>();
-            Response<List<tbPerson>> response = new Response<List<tbPerson>>();
+            List<tb_persona> personaList = new List<tb_persona>();
+            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
             try
             {
-                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync("api/person");
+                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync("api/persona");
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<List<tbPerson>>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    userList = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<List<tb_persona>>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    personaList = response.ReturnValue;
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex.ToString());
             }
-            return View(userList);
+            return View(personaList);
         }
 
         // GET: User/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            tbPerson user = new tbPerson();
-            Response<tbPerson> response = new Response<tbPerson>();
+            tb_persona persona = new tb_persona();
+            Response<tb_persona> response = new Response<tb_persona>();
             try
             {
-                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/person/", id));
+                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/persona/", id));
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    user = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    persona = response.ReturnValue;
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex.ToString());
             }
-            return View(user);
+            return View(persona);
         }
 
         // GET: User/Create
@@ -67,25 +67,25 @@ namespace IngenieriaTareaUI.Controllers
         public async Task<ActionResult> Create(FormCollection collection)
         {
 
-            Response<tbPerson> response = new Response<tbPerson>();
-            tbPerson user = new tbPerson();
+            Response<tb_persona> response = new Response<tb_persona>();
+            tb_persona persona = new tb_persona();
             try
             {
-                user.nombre = collection.GetValue("nombre").AttemptedValue.ToString();
-                user.id = Int32.Parse(collection.GetValue("id").AttemptedValue.ToString());
+                persona.nombre = collection.GetValue("nombre").AttemptedValue.ToString();
+                persona.id = Int32.Parse(collection.GetValue("id").AttemptedValue.ToString());
 
-                String jsonContent = JsonConvert.SerializeObject(user);
+                String jsonContent = JsonConvert.SerializeObject(persona);
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(jsonContent);
                 ByteArrayContent byteArrayContent = new ByteArrayContent(buffer);
                 byteArrayContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                HttpResponseMessage responseWAPI = await _WsWebAPI.PostAsync("api/person/", byteArrayContent);
+                HttpResponseMessage responseWAPI = await _WsWebAPI.PostAsync("api/persona/", byteArrayContent);
 
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    user = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    persona = response.ReturnValue;
                 }
 
                 return RedirectToAction("Index");
@@ -99,47 +99,47 @@ namespace IngenieriaTareaUI.Controllers
         // GET: User/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            tbPerson user = new tbPerson();
-            Response<tbPerson> response = new Response<tbPerson>();
+            tb_persona persona = new tb_persona();
+            Response<tb_persona> response = new Response<tb_persona>();
             try
             {
-                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/person/", id));
+                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/persona/", id));
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    user = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    persona = response.ReturnValue;
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex.ToString());
             }
-            return View(user);
+            return View(persona);
         }
 
         // POST: User/Edit/5
         [HttpPost]
         public async Task<ActionResult> EditAction(int id, FormCollection collection)
         {
-            Response<tbPerson> response = new Response<tbPerson>();
-            tbPerson user = new tbPerson();
+            Response<tb_persona> response = new Response<tb_persona>();
+            tb_persona persona = new tb_persona();
             try
             {
-                user.nombre = collection.GetValue("nombre").AttemptedValue.ToString();
-                user.id = Int32.Parse(collection.GetValue("id").AttemptedValue.ToString());
+                persona.nombre = collection.GetValue("nombre").AttemptedValue.ToString();
+                persona.id = Int32.Parse(collection.GetValue("id").AttemptedValue.ToString());
 
-                String jsonContent = JsonConvert.SerializeObject(user);
+                String jsonContent = JsonConvert.SerializeObject(persona);
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(jsonContent);
                 ByteArrayContent byteArrayContent = new ByteArrayContent(buffer);
                 byteArrayContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                HttpResponseMessage responseWAPI = await _WsWebAPI.PutAsync(String.Concat("api/person/", id), byteArrayContent);
+                HttpResponseMessage responseWAPI = await _WsWebAPI.PutAsync(String.Concat("api/persona/", id), byteArrayContent);
 
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    user = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    persona = response.ReturnValue;
                 }
 
                 return RedirectToAction("Index");
@@ -153,22 +153,22 @@ namespace IngenieriaTareaUI.Controllers
         // GET: User/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
-            tbPerson user = new tbPerson();
-            Response<tbPerson> response = new Response<tbPerson>();
+            tb_persona persona = new tb_persona();
+            Response<tb_persona> response = new Response<tb_persona>();
             try
             {
-                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/person/", id));
+                HttpResponseMessage responseWAPI = await _WsWebAPI.GetAsync(String.Concat("api/persona/", id));
                 if (responseWAPI.IsSuccessStatusCode)
                 {
-                    response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                    user = response.ReturnValue;
+                    response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                    persona = response.ReturnValue;
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex.ToString());
             }
-            return View(user);
+            return View(persona);
         }
 
         // POST: User/Delete/5
@@ -176,15 +176,15 @@ namespace IngenieriaTareaUI.Controllers
         {
             try
             {
-                tbPerson user = new tbPerson();
-                Response<tbPerson> response = new Response<tbPerson>();
+                tb_persona persona = new tb_persona();
+                Response<tb_persona> response = new Response<tb_persona>();
                 try
                 {
-                    HttpResponseMessage responseWAPI = await _WsWebAPI.DeleteAsync(String.Concat("api/person/", id));
+                    HttpResponseMessage responseWAPI = await _WsWebAPI.DeleteAsync(String.Concat("api/persona/", id));
                     if (responseWAPI.IsSuccessStatusCode)
                     {
-                        response = JsonConvert.DeserializeObject<Response<tbPerson>>(responseWAPI.Content.ReadAsStringAsync().Result);
-                        user = response.ReturnValue;
+                        response = JsonConvert.DeserializeObject<Response<tb_persona>>(responseWAPI.Content.ReadAsStringAsync().Result);
+                        persona = response.ReturnValue;
                     }
                 }
                 catch (Exception ex)
