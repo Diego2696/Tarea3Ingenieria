@@ -2,3 +2,8 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\bin\Debug\Domain.UTL.pdb
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.dll
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.UTL\bin\Debug\Domain.UTL.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.UTL\bin\Debug\Domain.UTL.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.UTL\obj\Debug\Domain.UTL.pdb

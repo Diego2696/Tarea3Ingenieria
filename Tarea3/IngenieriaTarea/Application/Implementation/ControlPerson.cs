@@ -2,6 +2,7 @@
 using Domain;
 using Domain.Entities;
 using Domain.UTL;
+using Infraestructure.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,14 @@ namespace Application.Implementation
         private readonly IRepositoryPerson DomainUser;
         #endregion
 
-        public ControlPerson(IRepositoryPerson repository)
+        public ControlPerson()
         {
-            DomainUser = repository;
+            DomainUser = new RepositoryPerson();
         }
 
-        public Response<List<tbPerson>> lfGet()
+        public Response<List<tb_persona>> lfGet()
         {
-            Response<List<tbPerson>> response = new Response<List<tbPerson>>();
+            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
 
             try
             {
@@ -38,13 +39,13 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tbPerson> lfGet(int idTemp)
+        public Response<tb_persona> lfGet(int idTemp)
         {
-            Response<tbPerson> response = new Response<tbPerson>();
+            Response<tb_persona> response = new Response<tb_persona>();
 
             try
             {
-                response.ReturnValue = DomainUser.GetPersonById(new tbPerson { id = idTemp });
+                response.ReturnValue = DomainUser.GetPersonById(new tb_persona { id = idTemp });
             }
             catch (Exception ex)
             {
@@ -55,9 +56,9 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tbPerson> lfInsert(tbPerson user)
+        public Response<tb_persona> lfInsert(tb_persona user)
         {
-            Response<tbPerson> response = new Response<tbPerson>();
+            Response<tb_persona> response = new Response<tb_persona>();
 
             try
             {
@@ -72,9 +73,9 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tbPerson> lfUpdate(tbPerson user)
+        public Response<tb_persona> lfUpdate(tb_persona user)
         {
-            Response<tbPerson> response = new Response<tbPerson>();
+            Response<tb_persona> response = new Response<tb_persona>();
 
             try
             {
@@ -94,7 +95,7 @@ namespace Application.Implementation
             Response<bool> response = new Response<bool>();
             try
             {
-                response.ReturnValue = DomainUser.DeletePerson(new tbPerson { id = idTemp });
+                response.ReturnValue = DomainUser.DeletePerson(new tb_persona { id = idTemp });
             }
             catch (Exception ex)
             {

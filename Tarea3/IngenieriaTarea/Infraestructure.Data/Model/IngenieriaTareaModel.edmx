@@ -4,46 +4,3109 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_tarea3_pruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="tbPerson">
+      <Schema Namespace="db_b51795_b51330Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_alias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_persona" Type="int" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="db_tarea3_pruebaModelStoreContainer">
-          <EntitySet Name="tbPerson" EntityType="Self.tbPerson" Schema="dbo" store:Type="Tables" />
+        <EntityType Name="tb_aseguradora">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_caseta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_categoria_delito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_clase">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_color">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_delegacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_delito_secundario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_delito_secundario_informacion_basica">
+          <Key>
+            <PropertyRef Name="id_delito_secundario" />
+            <PropertyRef Name="id_informacion_basica" />
+          </Key>
+          <Property Name="id_delito_secundario" Type="int" Nullable="false" />
+          <Property Name="id_informacion_basica" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="caracteristica" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_estado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_estado_civil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_funcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_hecho">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pais" Type="varchar(max)" Nullable="false" />
+          <Property Name="provincia" Type="varchar(max)" Nullable="false" />
+          <Property Name="canton" Type="varchar(max)" Nullable="false" />
+          <Property Name="distrito" Type="varchar(max)" Nullable="false" />
+          <Property Name="barrio" Type="varchar(max)" Nullable="false" />
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="hora" Type="varchar(max)" Nullable="false" />
+          <Property Name="icono" Type="varbinary(max)" />
+          <Property Name="avenida" Type="varchar(max)" Nullable="false" />
+          <Property Name="calle" Type="varchar(max)" Nullable="false" />
+          <Property Name="senas" Type="varchar(max)" Nullable="false" />
+          <Property Name="x" Type="varchar(max)" Nullable="false" />
+          <Property Name="y" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_tipo_ubicacion" Type="int" />
+          <Property Name="id_proyeccion" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_imagen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imagen" Type="varbinary(max)" Nullable="false" />
+          <Property Name="id_informacion_imagen" Type="int" Nullable="false" />
+          <Property Name="id_persona" Type="int" />
+          <Property Name="id_vehiculo" Type="int" />
+          <Property Name="id_objeto" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_informacion_basica">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_origen" Type="int" Nullable="false" />
+          <Property Name="numero_unico" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_subcategoria_delito" Type="int" Nullable="false" />
+          <Property Name="id_modalidad" Type="int" />
+          <Property Name="id_subvictima" Type="int" Nullable="false" />
+          <Property Name="fecha_ingreso" Type="date" Nullable="false" />
+          <Property Name="id_oficina_encargado" Type="int" Nullable="false" />
+          <Property Name="id_delegacion" Type="int" Nullable="false" />
+          <Property Name="perjuicio" Type="varchar(max)" Nullable="false" />
+          <Property Name="moneda" Type="varchar(max)" Nullable="false" />
+          <Property Name="tentativo" Type="int" Nullable="false" />
+          <Property Name="observaciones" Type="varchar(max)" Nullable="false" />
+          <Property Name="narracion" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_hecho" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_informacion_imagen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imagen" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_intensidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_marca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_modalidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_nombre_fantasia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_objeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_subtipo" Type="int" Nullable="false" />
+          <Property Name="serie" Type="varchar(max)" Nullable="false" />
+          <Property Name="modelo" Type="varchar(max)" Nullable="false" />
+          <Property Name="marca" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_color" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar(max)" Nullable="false" />
+          <Property Name="nombre_entidad" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_intensidad" Type="int" Nullable="false" />
+          <Property Name="atributo" Type="varchar(max)" Nullable="false" />
+          <Property Name="decomisado" Type="int" Nullable="false" />
+          <Property Name="observaciones" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_rol" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_oficial_policia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_policia" Type="int" Nullable="false" />
+          <Property Name="id_unidad" Type="int" Nullable="false" />
+          <Property Name="id_placa" Type="int" Nullable="false" />
+          <Property Name="id_caseta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_oficina_encargado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_opcion_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_detalle_persona" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_origen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_tipo_identificacion" Type="int" Nullable="false" />
+          <Property Name="numero_identificacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="primer_apellido" Type="varchar(max)" Nullable="false" />
+          <Property Name="segundo_apellido" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_estado_civil" Type="int" Nullable="false" />
+          <Property Name="sexo" Type="varchar(max)" Nullable="false" />
+          <Property Name="nacionalidad" Type="varchar(max)" Nullable="false" />
+          <Property Name="detenido" Type="int" Nullable="false" />
+          <Property Name="desaparecido" Type="int" Nullable="false" />
+          <Property Name="revisado_reten" Type="int" Nullable="false" />
+          <Property Name="oficio_profesion" Type="varchar(max)" Nullable="false" />
+          <Property Name="expediente_criminal" Type="varchar(max)" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="date" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="id_subgrupo_victima" Type="int" />
+          <Property Name="numero_autopsia" Type="int" Nullable="false" />
+          <Property Name="id_tipo_muerte" Type="int" />
+          <Property Name="id_funcion" Type="int" />
+          <Property Name="nombre_entidad" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_intensidad" Type="int" Nullable="false" />
+          <Property Name="atributo" Type="varchar(max)" Nullable="false" />
+          <Property Name="observaciones" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_rol" Type="int" Nullable="false" />
+          <Property Name="id_oficial_policia" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_persona_juridica">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cedula_juridica" Type="varchar(max)" Nullable="false" />
+          <Property Name="razon_social" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_nombre_fantasia" Type="int" Nullable="false" />
+          <Property Name="filial" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_estado" Type="int" Nullable="false" />
+          <Property Name="nombre_entidad" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_intensidad" Type="int" Nullable="false" />
+          <Property Name="atributo" Type="varchar(max)" Nullable="false" />
+          <Property Name="allanada" Type="int" Nullable="false" />
+          <Property Name="observaciones" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_rol" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_placa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_poblacion_vulnerable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_poblacion_vulnerable_persona">
+          <Key>
+            <PropertyRef Name="id_poblacion_vulnerable" />
+            <PropertyRef Name="id_persona" />
+          </Key>
+          <Property Name="id_poblacion_vulnerable" Type="int" Nullable="false" />
+          <Property Name="id_persona" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_policia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cedula" Type="varchar(max)" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="apellidos" Type="varchar(max)" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_proyeccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_subcategoria_delito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_categoria_delito" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_subgrupo_victima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_subtipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_subtipo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_subvictima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_victima" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_tipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_tipo_identificacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_tipo_muerte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_tipo_ubicacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_unidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_valor_opcion_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcion" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_opcion_detalle_persona" Type="int" />
+          <Property Name="id_persona" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_vehiculo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_tipo_identificacion" Type="int" Nullable="false" />
+          <Property Name="numero_identificacion" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_clase" Type="int" Nullable="false" />
+          <Property Name="codigo" Type="varchar(max)" Nullable="false" />
+          <Property Name="numero_bien" Type="varchar(max)" Nullable="false" />
+          <Property Name="anno" Type="varchar(max)" Nullable="false" />
+          <Property Name="poliza" Type="int" Nullable="false" />
+          <Property Name="decomisado" Type="int" Nullable="false" />
+          <Property Name="id_marca" Type="int" Nullable="false" />
+          <Property Name="id_color" Type="int" Nullable="false" />
+          <Property Name="estilo" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_aseguradora" Type="int" Nullable="false" />
+          <Property Name="nombre_entidad" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_intensidad" Type="int" Nullable="false" />
+          <Property Name="atributo" Type="varchar(max)" Nullable="false" />
+          <Property Name="observaciones" Type="varchar(max)" Nullable="false" />
+          <Property Name="id_rol" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_victima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_categoria_subcategoria_delito">
+          <End Role="tb_categoria_delito" Type="Self.tb_categoria_delito" Multiplicity="1" />
+          <End Role="tb_subcategoria_delito" Type="Self.tb_subcategoria_delito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_categoria_delito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subcategoria_delito">
+              <PropertyRef Name="id_categoria_delito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_aseguradora">
+          <End Role="tb_aseguradora" Type="Self.tb_aseguradora" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_aseguradora">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_aseguradora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_caseta">
+          <End Role="tb_caseta" Type="Self.tb_caseta" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_caseta">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_caseta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_clase">
+          <End Role="tb_clase" Type="Self.tb_clase" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_clase">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_clase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_color_objeto">
+          <End Role="tb_color" Type="Self.tb_color" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_color">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_color_vehiculo">
+          <End Role="tb_color" Type="Self.tb_color" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_color">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_delegacion">
+          <End Role="tb_delegacion" Type="Self.tb_delegacion" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_delegacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_delegacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_delito_secundario">
+          <End Role="tb_delito_secundario" Type="Self.tb_delito_secundario" Multiplicity="1" />
+          <End Role="tb_delito_secundario_informacion_basica" Type="Self.tb_delito_secundario_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_delito_secundario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_delito_secundario_informacion_basica">
+              <PropertyRef Name="id_delito_secundario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_detalle_persona">
+          <End Role="tb_detalle_persona" Type="Self.tb_detalle_persona" Multiplicity="0..1" />
+          <End Role="tb_opcion_detalle_persona" Type="Self.tb_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_detalle_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_opcion_detalle_persona">
+              <PropertyRef Name="id_detalle_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_estado">
+          <End Role="tb_estado" Type="Self.tb_estado" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_estado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_estado_civil">
+          <End Role="tb_estado_civil" Type="Self.tb_estado_civil" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_estado_civil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_estado_civil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_funcion">
+          <End Role="tb_funcion" Type="Self.tb_funcion" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_funcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_funcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_hecho">
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_hecho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_hecho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_informacion_basica">
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="1" />
+          <End Role="tb_delito_secundario_informacion_basica" Type="Self.tb_delito_secundario_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_informacion_basica">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_delito_secundario_informacion_basica">
+              <PropertyRef Name="id_informacion_basica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_informacion_imagen">
+          <End Role="tb_informacion_imagen" Type="Self.tb_informacion_imagen" Multiplicity="1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_informacion_imagen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_informacion_imagen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_objeto">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_persona">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_persona_juridica">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_vehiculo">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_marca">
+          <End Role="tb_marca" Type="Self.tb_marca" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_marca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_modalidad">
+          <End Role="tb_modalidad" Type="Self.tb_modalidad" Multiplicity="0..1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_modalidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_modalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_nombre_fantasia">
+          <End Role="tb_nombre_fantasia" Type="Self.tb_nombre_fantasia" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_nombre_fantasia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_nombre_fantasia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_objeto">
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_objeto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_objeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_oficial_policia">
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_oficial_policia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_oficial_policia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_oficina_encargado">
+          <End Role="tb_oficina_encargado" Type="Self.tb_oficina_encargado" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_oficina_encargado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_oficina_encargado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_opcion_detalle_persona">
+          <End Role="tb_opcion_detalle_persona" Type="Self.tb_opcion_detalle_persona" Multiplicity="0..1" />
+          <End Role="tb_valor_opcion_detalle_persona" Type="Self.tb_valor_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_opcion_detalle_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_valor_opcion_detalle_persona">
+              <PropertyRef Name="id_opcion_detalle_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_origen">
+          <End Role="tb_origen" Type="Self.tb_origen" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_origen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_origen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_persona_alias">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="1" />
+          <End Role="tb_alias" Type="Self.tb_alias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_alias">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_persona_imagen">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_persona_poblacion_vulnerable">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="1" />
+          <End Role="tb_poblacion_vulnerable_persona" Type="Self.tb_poblacion_vulnerable_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_poblacion_vulnerable_persona">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_placa">
+          <End Role="tb_placa" Type="Self.tb_placa" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_placa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_placa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_poblacion_vulnerable">
+          <End Role="tb_poblacion_vulnerable" Type="Self.tb_poblacion_vulnerable" Multiplicity="1" />
+          <End Role="tb_poblacion_vulnerable_persona" Type="Self.tb_poblacion_vulnerable_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_poblacion_vulnerable">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_poblacion_vulnerable_persona">
+              <PropertyRef Name="id_poblacion_vulnerable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_policia">
+          <End Role="tb_policia" Type="Self.tb_policia" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_policia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_policia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_objeto">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_persona">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_persona_juridica">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_vehiculo">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subcategoria_delito">
+          <End Role="tb_subcategoria_delito" Type="Self.tb_subcategoria_delito" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subcategoria_delito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_subcategoria_delito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subgrupo_victima">
+          <End Role="tb_subgrupo_victima" Type="Self.tb_subgrupo_victima" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subgrupo_victima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_subgrupo_victima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subtipo">
+          <End Role="tb_subtipo" Type="Self.tb_subtipo" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subtipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_subtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subvictima">
+          <End Role="tb_subvictima" Type="Self.tb_subvictima" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subvictima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_subvictima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_identificacion_persona">
+          <End Role="tb_tipo_identificacion" Type="Self.tb_tipo_identificacion" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_identificacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_tipo_identificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_identificacion_vehiculo">
+          <End Role="tb_tipo_identificacion" Type="Self.tb_tipo_identificacion" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_identificacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_tipo_identificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_muerte">
+          <End Role="tb_tipo_muerte" Type="Self.tb_tipo_muerte" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_muerte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_tipo_muerte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_unidad">
+          <End Role="tb_unidad" Type="Self.tb_unidad" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_unidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_unidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_vehiculo_imagen">
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_vehiculo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_vehiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_proyeccion">
+          <End Role="tb_proyeccion" Type="Self.tb_proyeccion" Multiplicity="0..1" />
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_proyeccion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_hecho">
+              <PropertyRef Name="id_proyeccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_subtipo">
+          <End Role="tb_tipo" Type="Self.tb_tipo" Multiplicity="1" />
+          <End Role="tb_subtipo" Type="Self.tb_subtipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subtipo">
+              <PropertyRef Name="id_subtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_ubicacion">
+          <End Role="tb_tipo_ubicacion" Type="Self.tb_tipo_ubicacion" Multiplicity="0..1" />
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_ubicacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_hecho">
+              <PropertyRef Name="id_tipo_ubicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_valor_opcion_detalle_persona">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="0..1" />
+          <End Role="tb_valor_opcion_detalle_persona" Type="Self.tb_valor_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_valor_opcion_detalle_persona">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_victima_subvictima">
+          <End Role="tb_victima" Type="Self.tb_victima" Multiplicity="1" />
+          <End Role="tb_subvictima" Type="Self.tb_subvictima" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_victima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subvictima">
+              <PropertyRef Name="id_victima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_b51795_b51330ModelStoreContainer">
+          <EntitySet Name="tb_alias" EntityType="Self.tb_alias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_aseguradora" EntityType="Self.tb_aseguradora" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_caseta" EntityType="Self.tb_caseta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_categoria_delito" EntityType="Self.tb_categoria_delito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_clase" EntityType="Self.tb_clase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_color" EntityType="Self.tb_color" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_delegacion" EntityType="Self.tb_delegacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_delito_secundario" EntityType="Self.tb_delito_secundario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_delito_secundario_informacion_basica" EntityType="Self.tb_delito_secundario_informacion_basica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_detalle_persona" EntityType="Self.tb_detalle_persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_estado" EntityType="Self.tb_estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_estado_civil" EntityType="Self.tb_estado_civil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_funcion" EntityType="Self.tb_funcion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_hecho" EntityType="Self.tb_hecho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_imagen" EntityType="Self.tb_imagen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_informacion_basica" EntityType="Self.tb_informacion_basica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_informacion_imagen" EntityType="Self.tb_informacion_imagen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_intensidad" EntityType="Self.tb_intensidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_marca" EntityType="Self.tb_marca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_modalidad" EntityType="Self.tb_modalidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_nombre_fantasia" EntityType="Self.tb_nombre_fantasia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_objeto" EntityType="Self.tb_objeto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_oficial_policia" EntityType="Self.tb_oficial_policia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_oficina_encargado" EntityType="Self.tb_oficina_encargado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_opcion_detalle_persona" EntityType="Self.tb_opcion_detalle_persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_origen" EntityType="Self.tb_origen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_persona" EntityType="Self.tb_persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_persona_juridica" EntityType="Self.tb_persona_juridica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_placa" EntityType="Self.tb_placa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_poblacion_vulnerable" EntityType="Self.tb_poblacion_vulnerable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_poblacion_vulnerable_persona" EntityType="Self.tb_poblacion_vulnerable_persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_policia" EntityType="Self.tb_policia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_proyeccion" EntityType="Self.tb_proyeccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_rol" EntityType="Self.tb_rol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_subcategoria_delito" EntityType="Self.tb_subcategoria_delito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_subgrupo_victima" EntityType="Self.tb_subgrupo_victima" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_subtipo" EntityType="Self.tb_subtipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_subvictima" EntityType="Self.tb_subvictima" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_tipo" EntityType="Self.tb_tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_tipo_identificacion" EntityType="Self.tb_tipo_identificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_tipo_muerte" EntityType="Self.tb_tipo_muerte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_tipo_ubicacion" EntityType="Self.tb_tipo_ubicacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_unidad" EntityType="Self.tb_unidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_valor_opcion_detalle_persona" EntityType="Self.tb_valor_opcion_detalle_persona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_vehiculo" EntityType="Self.tb_vehiculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_victima" EntityType="Self.tb_victima" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_categoria_subcategoria_delito" Association="Self.fk_categoria_subcategoria_delito">
+            <End Role="tb_categoria_delito" EntitySet="tb_categoria_delito" />
+            <End Role="tb_subcategoria_delito" EntitySet="tb_subcategoria_delito" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_aseguradora" Association="Self.fk_id_aseguradora">
+            <End Role="tb_aseguradora" EntitySet="tb_aseguradora" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_caseta" Association="Self.fk_id_caseta">
+            <End Role="tb_caseta" EntitySet="tb_caseta" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_clase" Association="Self.fk_id_clase">
+            <End Role="tb_clase" EntitySet="tb_clase" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_color_objeto" Association="Self.fk_id_color_objeto">
+            <End Role="tb_color" EntitySet="tb_color" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_color_vehiculo" Association="Self.fk_id_color_vehiculo">
+            <End Role="tb_color" EntitySet="tb_color" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_delegacion" Association="Self.fk_id_delegacion">
+            <End Role="tb_delegacion" EntitySet="tb_delegacion" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_delito_secundario" Association="Self.fk_id_delito_secundario">
+            <End Role="tb_delito_secundario" EntitySet="tb_delito_secundario" />
+            <End Role="tb_delito_secundario_informacion_basica" EntitySet="tb_delito_secundario_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_detalle_persona" Association="Self.fk_id_detalle_persona">
+            <End Role="tb_detalle_persona" EntitySet="tb_detalle_persona" />
+            <End Role="tb_opcion_detalle_persona" EntitySet="tb_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_estado" Association="Self.fk_id_estado">
+            <End Role="tb_estado" EntitySet="tb_estado" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_estado_civil" Association="Self.fk_id_estado_civil">
+            <End Role="tb_estado_civil" EntitySet="tb_estado_civil" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_funcion" Association="Self.fk_id_funcion">
+            <End Role="tb_funcion" EntitySet="tb_funcion" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_hecho" Association="Self.fk_id_hecho">
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_informacion_basica" Association="Self.fk_id_informacion_basica">
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+            <End Role="tb_delito_secundario_informacion_basica" EntitySet="tb_delito_secundario_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_informacion_imagen" Association="Self.fk_id_informacion_imagen">
+            <End Role="tb_informacion_imagen" EntitySet="tb_informacion_imagen" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_objeto" Association="Self.fk_id_intensidad_objeto">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_persona" Association="Self.fk_id_intensidad_persona">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_persona_juridica" Association="Self.fk_id_intensidad_persona_juridica">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_vehiculo" Association="Self.fk_id_intensidad_vehiculo">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_marca" Association="Self.fk_id_marca">
+            <End Role="tb_marca" EntitySet="tb_marca" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_modalidad" Association="Self.fk_id_modalidad">
+            <End Role="tb_modalidad" EntitySet="tb_modalidad" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_nombre_fantasia" Association="Self.fk_id_nombre_fantasia">
+            <End Role="tb_nombre_fantasia" EntitySet="tb_nombre_fantasia" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_objeto" Association="Self.fk_id_objeto">
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_oficial_policia" Association="Self.fk_id_oficial_policia">
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_oficina_encargado" Association="Self.fk_id_oficina_encargado">
+            <End Role="tb_oficina_encargado" EntitySet="tb_oficina_encargado" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_opcion_detalle_persona" Association="Self.fk_id_opcion_detalle_persona">
+            <End Role="tb_opcion_detalle_persona" EntitySet="tb_opcion_detalle_persona" />
+            <End Role="tb_valor_opcion_detalle_persona" EntitySet="tb_valor_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_origen" Association="Self.fk_id_origen">
+            <End Role="tb_origen" EntitySet="tb_origen" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_persona_alias" Association="Self.fk_id_persona_alias">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_alias" EntitySet="tb_alias" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_persona_imagen" Association="Self.fk_id_persona_imagen">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_persona_poblacion_vulnerable" Association="Self.fk_id_persona_poblacion_vulnerable">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_poblacion_vulnerable_persona" EntitySet="tb_poblacion_vulnerable_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_placa" Association="Self.fk_id_placa">
+            <End Role="tb_placa" EntitySet="tb_placa" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_poblacion_vulnerable" Association="Self.fk_id_poblacion_vulnerable">
+            <End Role="tb_poblacion_vulnerable" EntitySet="tb_poblacion_vulnerable" />
+            <End Role="tb_poblacion_vulnerable_persona" EntitySet="tb_poblacion_vulnerable_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_policia" Association="Self.fk_id_policia">
+            <End Role="tb_policia" EntitySet="tb_policia" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_objeto" Association="Self.fk_id_rol_objeto">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_persona" Association="Self.fk_id_rol_persona">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_persona_juridica" Association="Self.fk_id_rol_persona_juridica">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_vehiculo" Association="Self.fk_id_rol_vehiculo">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subcategoria_delito" Association="Self.fk_id_subcategoria_delito">
+            <End Role="tb_subcategoria_delito" EntitySet="tb_subcategoria_delito" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subgrupo_victima" Association="Self.fk_id_subgrupo_victima">
+            <End Role="tb_subgrupo_victima" EntitySet="tb_subgrupo_victima" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subtipo" Association="Self.fk_id_subtipo">
+            <End Role="tb_subtipo" EntitySet="tb_subtipo" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subvictima" Association="Self.fk_id_subvictima">
+            <End Role="tb_subvictima" EntitySet="tb_subvictima" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_identificacion_persona" Association="Self.fk_id_tipo_identificacion_persona">
+            <End Role="tb_tipo_identificacion" EntitySet="tb_tipo_identificacion" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_identificacion_vehiculo" Association="Self.fk_id_tipo_identificacion_vehiculo">
+            <End Role="tb_tipo_identificacion" EntitySet="tb_tipo_identificacion" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_muerte" Association="Self.fk_id_tipo_muerte">
+            <End Role="tb_tipo_muerte" EntitySet="tb_tipo_muerte" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_unidad" Association="Self.fk_id_unidad">
+            <End Role="tb_unidad" EntitySet="tb_unidad" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_vehiculo_imagen" Association="Self.fk_id_vehiculo_imagen">
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_proyeccion" Association="Self.fk_proyeccion">
+            <End Role="tb_proyeccion" EntitySet="tb_proyeccion" />
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_subtipo" Association="Self.fk_tipo_subtipo">
+            <End Role="tb_tipo" EntitySet="tb_tipo" />
+            <End Role="tb_subtipo" EntitySet="tb_subtipo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_ubicacion" Association="Self.fk_tipo_ubicacion">
+            <End Role="tb_tipo_ubicacion" EntitySet="tb_tipo_ubicacion" />
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_valor_opcion_detalle_persona" Association="Self.fk_valor_opcion_detalle_persona">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_valor_opcion_detalle_persona" EntitySet="tb_valor_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_victima_subvictima" Association="Self.fk_victima_subvictima">
+            <End Role="tb_victima" EntitySet="tb_victima" />
+            <End Role="tb_subvictima" EntitySet="tb_subvictima" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="db_tarea3_pruebaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="tbPerson">
+      <Schema Namespace="db_b51795_b51330Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_alias">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_persona" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_persona_alias" FromRole="tb_alias" ToRole="tb_persona" />
         </EntityType>
-        <EntityContainer Name="db_tarea3_pruebaEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbPerson" EntityType="Self.tbPerson" />
+        <EntityType Name="tb_aseguradora">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_aseguradora" FromRole="tb_aseguradora" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_caseta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_oficial_policia" Relationship="Self.fk_id_caseta" FromRole="tb_caseta" ToRole="tb_oficial_policia" />
+        </EntityType>
+        <EntityType Name="tb_categoria_delito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_subcategoria_delito" Relationship="Self.fk_categoria_subcategoria_delito" FromRole="tb_categoria_delito" ToRole="tb_subcategoria_delito" />
+        </EntityType>
+        <EntityType Name="tb_clase">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_clase" FromRole="tb_clase" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_color">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_objeto" Relationship="Self.fk_id_color_objeto" FromRole="tb_color" ToRole="tb_objeto" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_color_vehiculo" FromRole="tb_color" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_delegacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_delegacion" FromRole="tb_delegacion" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_delito_secundario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.tb_delito_secundario_informacion_basica" FromRole="tb_delito_secundario" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="caracteristica" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_opcion_detalle_persona" Relationship="Self.fk_id_detalle_persona" FromRole="tb_detalle_persona" ToRole="tb_opcion_detalle_persona" />
+        </EntityType>
+        <EntityType Name="tb_estado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona_juridica" Relationship="Self.fk_id_estado" FromRole="tb_estado" ToRole="tb_persona_juridica" />
+        </EntityType>
+        <EntityType Name="tb_estado_civil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_estado_civil" FromRole="tb_estado_civil" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_funcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_funcion" FromRole="tb_funcion" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_hecho">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pais" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provincia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="canton" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="distrito" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="barrio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="hora" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="icono" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="avenida" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="calle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="senas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="x" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="y" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_tipo_ubicacion" Type="Int32" />
+          <Property Name="id_proyeccion" Type="Int32" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_hecho" FromRole="tb_hecho" ToRole="tb_informacion_basica" />
+          <NavigationProperty Name="tb_proyeccion" Relationship="Self.fk_proyeccion" FromRole="tb_hecho" ToRole="tb_proyeccion" />
+          <NavigationProperty Name="tb_tipo_ubicacion" Relationship="Self.fk_tipo_ubicacion" FromRole="tb_hecho" ToRole="tb_tipo_ubicacion" />
+        </EntityType>
+        <EntityType Name="tb_imagen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="id_informacion_imagen" Type="Int32" Nullable="false" />
+          <Property Name="id_persona" Type="Int32" />
+          <Property Name="id_vehiculo" Type="Int32" />
+          <Property Name="id_objeto" Type="Int32" />
+          <NavigationProperty Name="tb_informacion_imagen" Relationship="Self.fk_id_informacion_imagen" FromRole="tb_imagen" ToRole="tb_informacion_imagen" />
+          <NavigationProperty Name="tb_objeto" Relationship="Self.fk_id_objeto" FromRole="tb_imagen" ToRole="tb_objeto" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_persona_imagen" FromRole="tb_imagen" ToRole="tb_persona" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_vehiculo_imagen" FromRole="tb_imagen" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_informacion_basica">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_origen" Type="Int32" Nullable="false" />
+          <Property Name="numero_unico" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_subcategoria_delito" Type="Int32" Nullable="false" />
+          <Property Name="id_modalidad" Type="Int32" />
+          <Property Name="id_subvictima" Type="Int32" Nullable="false" />
+          <Property Name="fecha_ingreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_oficina_encargado" Type="Int32" Nullable="false" />
+          <Property Name="id_delegacion" Type="Int32" Nullable="false" />
+          <Property Name="perjuicio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="moneda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tentativo" Type="Int32" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="narracion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_hecho" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_delegacion" Relationship="Self.fk_id_delegacion" FromRole="tb_informacion_basica" ToRole="tb_delegacion" />
+          <NavigationProperty Name="tb_hecho" Relationship="Self.fk_id_hecho" FromRole="tb_informacion_basica" ToRole="tb_hecho" />
+          <NavigationProperty Name="tb_modalidad" Relationship="Self.fk_id_modalidad" FromRole="tb_informacion_basica" ToRole="tb_modalidad" />
+          <NavigationProperty Name="tb_oficina_encargado" Relationship="Self.fk_id_oficina_encargado" FromRole="tb_informacion_basica" ToRole="tb_oficina_encargado" />
+          <NavigationProperty Name="tb_origen" Relationship="Self.fk_id_origen" FromRole="tb_informacion_basica" ToRole="tb_origen" />
+          <NavigationProperty Name="tb_subcategoria_delito" Relationship="Self.fk_id_subcategoria_delito" FromRole="tb_informacion_basica" ToRole="tb_subcategoria_delito" />
+          <NavigationProperty Name="tb_subvictima" Relationship="Self.fk_id_subvictima" FromRole="tb_informacion_basica" ToRole="tb_subvictima" />
+          <NavigationProperty Name="tb_delito_secundario" Relationship="Self.tb_delito_secundario_informacion_basica" FromRole="tb_informacion_basica" ToRole="tb_delito_secundario" />
+        </EntityType>
+        <EntityType Name="tb_informacion_imagen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="tb_imagen" Relationship="Self.fk_id_informacion_imagen" FromRole="tb_informacion_imagen" ToRole="tb_imagen" />
+        </EntityType>
+        <EntityType Name="tb_intensidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_objeto" Relationship="Self.fk_id_intensidad_objeto" FromRole="tb_intensidad" ToRole="tb_objeto" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_intensidad_persona" FromRole="tb_intensidad" ToRole="tb_persona" />
+          <NavigationProperty Name="tb_persona_juridica" Relationship="Self.fk_id_intensidad_persona_juridica" FromRole="tb_intensidad" ToRole="tb_persona_juridica" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_intensidad_vehiculo" FromRole="tb_intensidad" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_marca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_marca" FromRole="tb_marca" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_modalidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_modalidad" FromRole="tb_modalidad" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_nombre_fantasia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona_juridica" Relationship="Self.fk_id_nombre_fantasia" FromRole="tb_nombre_fantasia" ToRole="tb_persona_juridica" />
+        </EntityType>
+        <EntityType Name="tb_objeto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_subtipo" Type="Int32" Nullable="false" />
+          <Property Name="serie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="modelo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_color" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_entidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_intensidad" Type="Int32" Nullable="false" />
+          <Property Name="atributo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="decomisado" Type="Int32" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_rol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_color" Relationship="Self.fk_id_color_objeto" FromRole="tb_objeto" ToRole="tb_color" />
+          <NavigationProperty Name="tb_imagen" Relationship="Self.fk_id_objeto" FromRole="tb_objeto" ToRole="tb_imagen" />
+          <NavigationProperty Name="tb_intensidad" Relationship="Self.fk_id_intensidad_objeto" FromRole="tb_objeto" ToRole="tb_intensidad" />
+          <NavigationProperty Name="tb_rol" Relationship="Self.fk_id_rol_objeto" FromRole="tb_objeto" ToRole="tb_rol" />
+          <NavigationProperty Name="tb_subtipo" Relationship="Self.fk_id_subtipo" FromRole="tb_objeto" ToRole="tb_subtipo" />
+        </EntityType>
+        <EntityType Name="tb_oficial_policia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_policia" Type="Int32" Nullable="false" />
+          <Property Name="id_unidad" Type="Int32" Nullable="false" />
+          <Property Name="id_placa" Type="Int32" Nullable="false" />
+          <Property Name="id_caseta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_caseta" Relationship="Self.fk_id_caseta" FromRole="tb_oficial_policia" ToRole="tb_caseta" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_oficial_policia" FromRole="tb_oficial_policia" ToRole="tb_persona" />
+          <NavigationProperty Name="tb_placa" Relationship="Self.fk_id_placa" FromRole="tb_oficial_policia" ToRole="tb_placa" />
+          <NavigationProperty Name="tb_policia" Relationship="Self.fk_id_policia" FromRole="tb_oficial_policia" ToRole="tb_policia" />
+          <NavigationProperty Name="tb_unidad" Relationship="Self.fk_id_unidad" FromRole="tb_oficial_policia" ToRole="tb_unidad" />
+        </EntityType>
+        <EntityType Name="tb_oficina_encargado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_oficina_encargado" FromRole="tb_oficina_encargado" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_opcion_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_detalle_persona" Type="Int32" />
+          <NavigationProperty Name="tb_detalle_persona" Relationship="Self.fk_id_detalle_persona" FromRole="tb_opcion_detalle_persona" ToRole="tb_detalle_persona" />
+          <NavigationProperty Name="tb_valor_opcion_detalle_persona" Relationship="Self.fk_id_opcion_detalle_persona" FromRole="tb_opcion_detalle_persona" ToRole="tb_valor_opcion_detalle_persona" />
+        </EntityType>
+        <EntityType Name="tb_origen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_origen" FromRole="tb_origen" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_tipo_identificacion" Type="Int32" Nullable="false" />
+          <Property Name="numero_identificacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="primer_apellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="segundo_apellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_estado_civil" Type="Int32" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nacionalidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="detenido" Type="Int32" Nullable="false" />
+          <Property Name="desaparecido" Type="Int32" Nullable="false" />
+          <Property Name="revisado_reten" Type="Int32" Nullable="false" />
+          <Property Name="oficio_profesion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="expediente_criminal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="id_subgrupo_victima" Type="Int32" />
+          <Property Name="numero_autopsia" Type="Int32" Nullable="false" />
+          <Property Name="id_tipo_muerte" Type="Int32" />
+          <Property Name="id_funcion" Type="Int32" />
+          <Property Name="nombre_entidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_intensidad" Type="Int32" Nullable="false" />
+          <Property Name="atributo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_rol" Type="Int32" Nullable="false" />
+          <Property Name="id_oficial_policia" Type="Int32" />
+          <NavigationProperty Name="tb_alias" Relationship="Self.fk_id_persona_alias" FromRole="tb_persona" ToRole="tb_alias" />
+          <NavigationProperty Name="tb_estado_civil" Relationship="Self.fk_id_estado_civil" FromRole="tb_persona" ToRole="tb_estado_civil" />
+          <NavigationProperty Name="tb_funcion" Relationship="Self.fk_id_funcion" FromRole="tb_persona" ToRole="tb_funcion" />
+          <NavigationProperty Name="tb_imagen" Relationship="Self.fk_id_persona_imagen" FromRole="tb_persona" ToRole="tb_imagen" />
+          <NavigationProperty Name="tb_intensidad" Relationship="Self.fk_id_intensidad_persona" FromRole="tb_persona" ToRole="tb_intensidad" />
+          <NavigationProperty Name="tb_oficial_policia" Relationship="Self.fk_id_oficial_policia" FromRole="tb_persona" ToRole="tb_oficial_policia" />
+          <NavigationProperty Name="tb_rol" Relationship="Self.fk_id_rol_persona" FromRole="tb_persona" ToRole="tb_rol" />
+          <NavigationProperty Name="tb_subgrupo_victima" Relationship="Self.fk_id_subgrupo_victima" FromRole="tb_persona" ToRole="tb_subgrupo_victima" />
+          <NavigationProperty Name="tb_tipo_identificacion" Relationship="Self.fk_id_tipo_identificacion_persona" FromRole="tb_persona" ToRole="tb_tipo_identificacion" />
+          <NavigationProperty Name="tb_tipo_muerte" Relationship="Self.fk_id_tipo_muerte" FromRole="tb_persona" ToRole="tb_tipo_muerte" />
+          <NavigationProperty Name="tb_valor_opcion_detalle_persona" Relationship="Self.fk_valor_opcion_detalle_persona" FromRole="tb_persona" ToRole="tb_valor_opcion_detalle_persona" />
+          <NavigationProperty Name="tb_poblacion_vulnerable" Relationship="Self.tb_poblacion_vulnerable_persona" FromRole="tb_persona" ToRole="tb_poblacion_vulnerable" />
+        </EntityType>
+        <EntityType Name="tb_persona_juridica">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cedula_juridica" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="razon_social" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_nombre_fantasia" Type="Int32" Nullable="false" />
+          <Property Name="filial" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_estado" Type="Int32" Nullable="false" />
+          <Property Name="nombre_entidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_intensidad" Type="Int32" Nullable="false" />
+          <Property Name="atributo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="allanada" Type="Int32" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_rol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_estado" Relationship="Self.fk_id_estado" FromRole="tb_persona_juridica" ToRole="tb_estado" />
+          <NavigationProperty Name="tb_intensidad" Relationship="Self.fk_id_intensidad_persona_juridica" FromRole="tb_persona_juridica" ToRole="tb_intensidad" />
+          <NavigationProperty Name="tb_nombre_fantasia" Relationship="Self.fk_id_nombre_fantasia" FromRole="tb_persona_juridica" ToRole="tb_nombre_fantasia" />
+          <NavigationProperty Name="tb_rol" Relationship="Self.fk_id_rol_persona_juridica" FromRole="tb_persona_juridica" ToRole="tb_rol" />
+        </EntityType>
+        <EntityType Name="tb_placa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_oficial_policia" Relationship="Self.fk_id_placa" FromRole="tb_placa" ToRole="tb_oficial_policia" />
+        </EntityType>
+        <EntityType Name="tb_poblacion_vulnerable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.tb_poblacion_vulnerable_persona" FromRole="tb_poblacion_vulnerable" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_policia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cedula" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_oficial_policia" Relationship="Self.fk_id_policia" FromRole="tb_policia" ToRole="tb_oficial_policia" />
+        </EntityType>
+        <EntityType Name="tb_proyeccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_hecho" Relationship="Self.fk_proyeccion" FromRole="tb_proyeccion" ToRole="tb_hecho" />
+        </EntityType>
+        <EntityType Name="tb_rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_objeto" Relationship="Self.fk_id_rol_objeto" FromRole="tb_rol" ToRole="tb_objeto" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_rol_persona" FromRole="tb_rol" ToRole="tb_persona" />
+          <NavigationProperty Name="tb_persona_juridica" Relationship="Self.fk_id_rol_persona_juridica" FromRole="tb_rol" ToRole="tb_persona_juridica" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_rol_vehiculo" FromRole="tb_rol" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_subcategoria_delito">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_categoria_delito" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_categoria_delito" Relationship="Self.fk_categoria_subcategoria_delito" FromRole="tb_subcategoria_delito" ToRole="tb_categoria_delito" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_subcategoria_delito" FromRole="tb_subcategoria_delito" ToRole="tb_informacion_basica" />
+        </EntityType>
+        <EntityType Name="tb_subgrupo_victima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_subgrupo_victima" FromRole="tb_subgrupo_victima" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_subtipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_subtipo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_objeto" Relationship="Self.fk_id_subtipo" FromRole="tb_subtipo" ToRole="tb_objeto" />
+          <NavigationProperty Name="tb_tipo" Relationship="Self.fk_tipo_subtipo" FromRole="tb_subtipo" ToRole="tb_tipo" />
+        </EntityType>
+        <EntityType Name="tb_subvictima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_victima" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_informacion_basica" Relationship="Self.fk_id_subvictima" FromRole="tb_subvictima" ToRole="tb_informacion_basica" />
+          <NavigationProperty Name="tb_victima" Relationship="Self.fk_victima_subvictima" FromRole="tb_subvictima" ToRole="tb_victima" />
+        </EntityType>
+        <EntityType Name="tb_tipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_subtipo" Relationship="Self.fk_tipo_subtipo" FromRole="tb_tipo" ToRole="tb_subtipo" />
+        </EntityType>
+        <EntityType Name="tb_tipo_identificacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_tipo_identificacion_persona" FromRole="tb_tipo_identificacion" ToRole="tb_persona" />
+          <NavigationProperty Name="tb_vehiculo" Relationship="Self.fk_id_tipo_identificacion_vehiculo" FromRole="tb_tipo_identificacion" ToRole="tb_vehiculo" />
+        </EntityType>
+        <EntityType Name="tb_tipo_muerte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_id_tipo_muerte" FromRole="tb_tipo_muerte" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_tipo_ubicacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_hecho" Relationship="Self.fk_tipo_ubicacion" FromRole="tb_tipo_ubicacion" ToRole="tb_hecho" />
+        </EntityType>
+        <EntityType Name="tb_unidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_oficial_policia" Relationship="Self.fk_id_unidad" FromRole="tb_unidad" ToRole="tb_oficial_policia" />
+        </EntityType>
+        <EntityType Name="tb_valor_opcion_detalle_persona">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_opcion_detalle_persona" Type="Int32" />
+          <Property Name="id_persona" Type="Int32" />
+          <NavigationProperty Name="tb_opcion_detalle_persona" Relationship="Self.fk_id_opcion_detalle_persona" FromRole="tb_valor_opcion_detalle_persona" ToRole="tb_opcion_detalle_persona" />
+          <NavigationProperty Name="tb_persona" Relationship="Self.fk_valor_opcion_detalle_persona" FromRole="tb_valor_opcion_detalle_persona" ToRole="tb_persona" />
+        </EntityType>
+        <EntityType Name="tb_vehiculo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_tipo_identificacion" Type="Int32" Nullable="false" />
+          <Property Name="numero_identificacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_clase" Type="Int32" Nullable="false" />
+          <Property Name="codigo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numero_bien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="anno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="poliza" Type="Int32" Nullable="false" />
+          <Property Name="decomisado" Type="Int32" Nullable="false" />
+          <Property Name="id_marca" Type="Int32" Nullable="false" />
+          <Property Name="id_color" Type="Int32" Nullable="false" />
+          <Property Name="estilo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_aseguradora" Type="Int32" Nullable="false" />
+          <Property Name="nombre_entidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_intensidad" Type="Int32" Nullable="false" />
+          <Property Name="atributo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_rol" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_aseguradora" Relationship="Self.fk_id_aseguradora" FromRole="tb_vehiculo" ToRole="tb_aseguradora" />
+          <NavigationProperty Name="tb_clase" Relationship="Self.fk_id_clase" FromRole="tb_vehiculo" ToRole="tb_clase" />
+          <NavigationProperty Name="tb_color" Relationship="Self.fk_id_color_vehiculo" FromRole="tb_vehiculo" ToRole="tb_color" />
+          <NavigationProperty Name="tb_imagen" Relationship="Self.fk_id_vehiculo_imagen" FromRole="tb_vehiculo" ToRole="tb_imagen" />
+          <NavigationProperty Name="tb_intensidad" Relationship="Self.fk_id_intensidad_vehiculo" FromRole="tb_vehiculo" ToRole="tb_intensidad" />
+          <NavigationProperty Name="tb_marca" Relationship="Self.fk_id_marca" FromRole="tb_vehiculo" ToRole="tb_marca" />
+          <NavigationProperty Name="tb_rol" Relationship="Self.fk_id_rol_vehiculo" FromRole="tb_vehiculo" ToRole="tb_rol" />
+          <NavigationProperty Name="tb_tipo_identificacion" Relationship="Self.fk_id_tipo_identificacion_vehiculo" FromRole="tb_vehiculo" ToRole="tb_tipo_identificacion" />
+        </EntityType>
+        <EntityType Name="tb_victima">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_subvictima" Relationship="Self.fk_victima_subvictima" FromRole="tb_victima" ToRole="tb_subvictima" />
+        </EntityType>
+        <Association Name="fk_id_persona_alias">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="1" />
+          <End Role="tb_alias" Type="Self.tb_alias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_alias">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_aseguradora">
+          <End Role="tb_aseguradora" Type="Self.tb_aseguradora" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_aseguradora">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_aseguradora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_caseta">
+          <End Role="tb_caseta" Type="Self.tb_caseta" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_caseta">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_caseta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_categoria_subcategoria_delito">
+          <End Role="tb_categoria_delito" Type="Self.tb_categoria_delito" Multiplicity="1" />
+          <End Role="tb_subcategoria_delito" Type="Self.tb_subcategoria_delito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_categoria_delito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subcategoria_delito">
+              <PropertyRef Name="id_categoria_delito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_clase">
+          <End Role="tb_clase" Type="Self.tb_clase" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_clase">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_clase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_color_objeto">
+          <End Role="tb_color" Type="Self.tb_color" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_color">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_color_vehiculo">
+          <End Role="tb_color" Type="Self.tb_color" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_color">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_delegacion">
+          <End Role="tb_delegacion" Type="Self.tb_delegacion" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_delegacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_delegacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_detalle_persona">
+          <End Role="tb_detalle_persona" Type="Self.tb_detalle_persona" Multiplicity="0..1" />
+          <End Role="tb_opcion_detalle_persona" Type="Self.tb_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_detalle_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_opcion_detalle_persona">
+              <PropertyRef Name="id_detalle_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_estado">
+          <End Role="tb_estado" Type="Self.tb_estado" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_estado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_estado_civil">
+          <End Role="tb_estado_civil" Type="Self.tb_estado_civil" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_estado_civil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_estado_civil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_funcion">
+          <End Role="tb_funcion" Type="Self.tb_funcion" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_funcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_funcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_hecho">
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_hecho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_hecho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_proyeccion">
+          <End Role="tb_proyeccion" Type="Self.tb_proyeccion" Multiplicity="0..1" />
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_proyeccion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_hecho">
+              <PropertyRef Name="id_proyeccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_ubicacion">
+          <End Role="tb_tipo_ubicacion" Type="Self.tb_tipo_ubicacion" Multiplicity="0..1" />
+          <End Role="tb_hecho" Type="Self.tb_hecho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_ubicacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_hecho">
+              <PropertyRef Name="id_tipo_ubicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_informacion_imagen">
+          <End Role="tb_informacion_imagen" Type="Self.tb_informacion_imagen" Multiplicity="1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_informacion_imagen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_informacion_imagen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_objeto">
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_objeto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_objeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_persona_imagen">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_vehiculo_imagen">
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="0..1" />
+          <End Role="tb_imagen" Type="Self.tb_imagen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_vehiculo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_imagen">
+              <PropertyRef Name="id_vehiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_modalidad">
+          <End Role="tb_modalidad" Type="Self.tb_modalidad" Multiplicity="0..1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_modalidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_modalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_oficina_encargado">
+          <End Role="tb_oficina_encargado" Type="Self.tb_oficina_encargado" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_oficina_encargado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_oficina_encargado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_origen">
+          <End Role="tb_origen" Type="Self.tb_origen" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_origen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_origen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subcategoria_delito">
+          <End Role="tb_subcategoria_delito" Type="Self.tb_subcategoria_delito" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subcategoria_delito">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_subcategoria_delito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subvictima">
+          <End Role="tb_subvictima" Type="Self.tb_subvictima" Multiplicity="1" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subvictima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_informacion_basica">
+              <PropertyRef Name="id_subvictima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_objeto">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_persona">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_persona_juridica">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_intensidad_vehiculo">
+          <End Role="tb_intensidad" Type="Self.tb_intensidad" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_intensidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_intensidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_marca">
+          <End Role="tb_marca" Type="Self.tb_marca" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_marca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_nombre_fantasia">
+          <End Role="tb_nombre_fantasia" Type="Self.tb_nombre_fantasia" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_nombre_fantasia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_nombre_fantasia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_objeto">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subtipo">
+          <End Role="tb_subtipo" Type="Self.tb_subtipo" Multiplicity="1" />
+          <End Role="tb_objeto" Type="Self.tb_objeto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subtipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_objeto">
+              <PropertyRef Name="id_subtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_oficial_policia">
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_oficial_policia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_oficial_policia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_placa">
+          <End Role="tb_placa" Type="Self.tb_placa" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_placa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_placa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_policia">
+          <End Role="tb_policia" Type="Self.tb_policia" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_policia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_policia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_unidad">
+          <End Role="tb_unidad" Type="Self.tb_unidad" Multiplicity="1" />
+          <End Role="tb_oficial_policia" Type="Self.tb_oficial_policia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_unidad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_oficial_policia">
+              <PropertyRef Name="id_unidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_opcion_detalle_persona">
+          <End Role="tb_opcion_detalle_persona" Type="Self.tb_opcion_detalle_persona" Multiplicity="0..1" />
+          <End Role="tb_valor_opcion_detalle_persona" Type="Self.tb_valor_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_opcion_detalle_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_valor_opcion_detalle_persona">
+              <PropertyRef Name="id_opcion_detalle_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_persona">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_subgrupo_victima">
+          <End Role="tb_subgrupo_victima" Type="Self.tb_subgrupo_victima" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_subgrupo_victima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_subgrupo_victima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_identificacion_persona">
+          <End Role="tb_tipo_identificacion" Type="Self.tb_tipo_identificacion" Multiplicity="1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_identificacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_tipo_identificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_muerte">
+          <End Role="tb_tipo_muerte" Type="Self.tb_tipo_muerte" Multiplicity="0..1" />
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_muerte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona">
+              <PropertyRef Name="id_tipo_muerte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_valor_opcion_detalle_persona">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="0..1" />
+          <End Role="tb_valor_opcion_detalle_persona" Type="Self.tb_valor_opcion_detalle_persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_valor_opcion_detalle_persona">
+              <PropertyRef Name="id_persona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_persona_juridica">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_persona_juridica" Type="Self.tb_persona_juridica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_persona_juridica">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_rol_vehiculo">
+          <End Role="tb_rol" Type="Self.tb_rol" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipo_subtipo">
+          <End Role="tb_tipo" Type="Self.tb_tipo" Multiplicity="1" />
+          <End Role="tb_subtipo" Type="Self.tb_subtipo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subtipo">
+              <PropertyRef Name="id_subtipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_victima_subvictima">
+          <End Role="tb_victima" Type="Self.tb_victima" Multiplicity="1" />
+          <End Role="tb_subvictima" Type="Self.tb_subvictima" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_victima">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_subvictima">
+              <PropertyRef Name="id_victima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_id_tipo_identificacion_vehiculo">
+          <End Role="tb_tipo_identificacion" Type="Self.tb_tipo_identificacion" Multiplicity="1" />
+          <End Role="tb_vehiculo" Type="Self.tb_vehiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_tipo_identificacion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_vehiculo">
+              <PropertyRef Name="id_tipo_identificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_delito_secundario_informacion_basica">
+          <End Role="tb_delito_secundario" Type="Self.tb_delito_secundario" Multiplicity="*" />
+          <End Role="tb_informacion_basica" Type="Self.tb_informacion_basica" Multiplicity="*" />
+        </Association>
+        <Association Name="tb_poblacion_vulnerable_persona">
+          <End Role="tb_persona" Type="Self.tb_persona" Multiplicity="*" />
+          <End Role="tb_poblacion_vulnerable" Type="Self.tb_poblacion_vulnerable" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="db_b51795_b51330Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_alias" EntityType="Self.tb_alias" />
+          <EntitySet Name="tb_aseguradora" EntityType="Self.tb_aseguradora" />
+          <EntitySet Name="tb_caseta" EntityType="Self.tb_caseta" />
+          <EntitySet Name="tb_categoria_delito" EntityType="Self.tb_categoria_delito" />
+          <EntitySet Name="tb_clase" EntityType="Self.tb_clase" />
+          <EntitySet Name="tb_color" EntityType="Self.tb_color" />
+          <EntitySet Name="tb_delegacion" EntityType="Self.tb_delegacion" />
+          <EntitySet Name="tb_delito_secundario" EntityType="Self.tb_delito_secundario" />
+          <EntitySet Name="tb_detalle_persona" EntityType="Self.tb_detalle_persona" />
+          <EntitySet Name="tb_estado" EntityType="Self.tb_estado" />
+          <EntitySet Name="tb_estado_civil" EntityType="Self.tb_estado_civil" />
+          <EntitySet Name="tb_funcion" EntityType="Self.tb_funcion" />
+          <EntitySet Name="tb_hecho" EntityType="Self.tb_hecho" />
+          <EntitySet Name="tb_imagen" EntityType="Self.tb_imagen" />
+          <EntitySet Name="tb_informacion_basica" EntityType="Self.tb_informacion_basica" />
+          <EntitySet Name="tb_informacion_imagen" EntityType="Self.tb_informacion_imagen" />
+          <EntitySet Name="tb_intensidad" EntityType="Self.tb_intensidad" />
+          <EntitySet Name="tb_marca" EntityType="Self.tb_marca" />
+          <EntitySet Name="tb_modalidad" EntityType="Self.tb_modalidad" />
+          <EntitySet Name="tb_nombre_fantasia" EntityType="Self.tb_nombre_fantasia" />
+          <EntitySet Name="tb_objeto" EntityType="Self.tb_objeto" />
+          <EntitySet Name="tb_oficial_policia" EntityType="Self.tb_oficial_policia" />
+          <EntitySet Name="tb_oficina_encargado" EntityType="Self.tb_oficina_encargado" />
+          <EntitySet Name="tb_opcion_detalle_persona" EntityType="Self.tb_opcion_detalle_persona" />
+          <EntitySet Name="tb_origen" EntityType="Self.tb_origen" />
+          <EntitySet Name="tb_persona" EntityType="Self.tb_persona" />
+          <EntitySet Name="tb_persona_juridica" EntityType="Self.tb_persona_juridica" />
+          <EntitySet Name="tb_placa" EntityType="Self.tb_placa" />
+          <EntitySet Name="tb_poblacion_vulnerable" EntityType="Self.tb_poblacion_vulnerable" />
+          <EntitySet Name="tb_policia" EntityType="Self.tb_policia" />
+          <EntitySet Name="tb_proyeccion" EntityType="Self.tb_proyeccion" />
+          <EntitySet Name="tb_rol" EntityType="Self.tb_rol" />
+          <EntitySet Name="tb_subcategoria_delito" EntityType="Self.tb_subcategoria_delito" />
+          <EntitySet Name="tb_subgrupo_victima" EntityType="Self.tb_subgrupo_victima" />
+          <EntitySet Name="tb_subtipo" EntityType="Self.tb_subtipo" />
+          <EntitySet Name="tb_subvictima" EntityType="Self.tb_subvictima" />
+          <EntitySet Name="tb_tipo" EntityType="Self.tb_tipo" />
+          <EntitySet Name="tb_tipo_identificacion" EntityType="Self.tb_tipo_identificacion" />
+          <EntitySet Name="tb_tipo_muerte" EntityType="Self.tb_tipo_muerte" />
+          <EntitySet Name="tb_tipo_ubicacion" EntityType="Self.tb_tipo_ubicacion" />
+          <EntitySet Name="tb_unidad" EntityType="Self.tb_unidad" />
+          <EntitySet Name="tb_valor_opcion_detalle_persona" EntityType="Self.tb_valor_opcion_detalle_persona" />
+          <EntitySet Name="tb_vehiculo" EntityType="Self.tb_vehiculo" />
+          <EntitySet Name="tb_victima" EntityType="Self.tb_victima" />
+          <AssociationSet Name="fk_id_persona_alias" Association="Self.fk_id_persona_alias">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_alias" EntitySet="tb_alias" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_aseguradora" Association="Self.fk_id_aseguradora">
+            <End Role="tb_aseguradora" EntitySet="tb_aseguradora" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_caseta" Association="Self.fk_id_caseta">
+            <End Role="tb_caseta" EntitySet="tb_caseta" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_categoria_subcategoria_delito" Association="Self.fk_categoria_subcategoria_delito">
+            <End Role="tb_categoria_delito" EntitySet="tb_categoria_delito" />
+            <End Role="tb_subcategoria_delito" EntitySet="tb_subcategoria_delito" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_clase" Association="Self.fk_id_clase">
+            <End Role="tb_clase" EntitySet="tb_clase" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_color_objeto" Association="Self.fk_id_color_objeto">
+            <End Role="tb_color" EntitySet="tb_color" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_color_vehiculo" Association="Self.fk_id_color_vehiculo">
+            <End Role="tb_color" EntitySet="tb_color" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_delegacion" Association="Self.fk_id_delegacion">
+            <End Role="tb_delegacion" EntitySet="tb_delegacion" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_detalle_persona" Association="Self.fk_id_detalle_persona">
+            <End Role="tb_detalle_persona" EntitySet="tb_detalle_persona" />
+            <End Role="tb_opcion_detalle_persona" EntitySet="tb_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_estado" Association="Self.fk_id_estado">
+            <End Role="tb_estado" EntitySet="tb_estado" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_estado_civil" Association="Self.fk_id_estado_civil">
+            <End Role="tb_estado_civil" EntitySet="tb_estado_civil" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_funcion" Association="Self.fk_id_funcion">
+            <End Role="tb_funcion" EntitySet="tb_funcion" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_hecho" Association="Self.fk_id_hecho">
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_proyeccion" Association="Self.fk_proyeccion">
+            <End Role="tb_proyeccion" EntitySet="tb_proyeccion" />
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_ubicacion" Association="Self.fk_tipo_ubicacion">
+            <End Role="tb_tipo_ubicacion" EntitySet="tb_tipo_ubicacion" />
+            <End Role="tb_hecho" EntitySet="tb_hecho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_informacion_imagen" Association="Self.fk_id_informacion_imagen">
+            <End Role="tb_informacion_imagen" EntitySet="tb_informacion_imagen" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_objeto" Association="Self.fk_id_objeto">
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_persona_imagen" Association="Self.fk_id_persona_imagen">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_vehiculo_imagen" Association="Self.fk_id_vehiculo_imagen">
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+            <End Role="tb_imagen" EntitySet="tb_imagen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_modalidad" Association="Self.fk_id_modalidad">
+            <End Role="tb_modalidad" EntitySet="tb_modalidad" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_oficina_encargado" Association="Self.fk_id_oficina_encargado">
+            <End Role="tb_oficina_encargado" EntitySet="tb_oficina_encargado" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_origen" Association="Self.fk_id_origen">
+            <End Role="tb_origen" EntitySet="tb_origen" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subcategoria_delito" Association="Self.fk_id_subcategoria_delito">
+            <End Role="tb_subcategoria_delito" EntitySet="tb_subcategoria_delito" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subvictima" Association="Self.fk_id_subvictima">
+            <End Role="tb_subvictima" EntitySet="tb_subvictima" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_objeto" Association="Self.fk_id_intensidad_objeto">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_persona" Association="Self.fk_id_intensidad_persona">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_persona_juridica" Association="Self.fk_id_intensidad_persona_juridica">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_intensidad_vehiculo" Association="Self.fk_id_intensidad_vehiculo">
+            <End Role="tb_intensidad" EntitySet="tb_intensidad" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_marca" Association="Self.fk_id_marca">
+            <End Role="tb_marca" EntitySet="tb_marca" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_nombre_fantasia" Association="Self.fk_id_nombre_fantasia">
+            <End Role="tb_nombre_fantasia" EntitySet="tb_nombre_fantasia" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_objeto" Association="Self.fk_id_rol_objeto">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subtipo" Association="Self.fk_id_subtipo">
+            <End Role="tb_subtipo" EntitySet="tb_subtipo" />
+            <End Role="tb_objeto" EntitySet="tb_objeto" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_oficial_policia" Association="Self.fk_id_oficial_policia">
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_placa" Association="Self.fk_id_placa">
+            <End Role="tb_placa" EntitySet="tb_placa" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_policia" Association="Self.fk_id_policia">
+            <End Role="tb_policia" EntitySet="tb_policia" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_unidad" Association="Self.fk_id_unidad">
+            <End Role="tb_unidad" EntitySet="tb_unidad" />
+            <End Role="tb_oficial_policia" EntitySet="tb_oficial_policia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_opcion_detalle_persona" Association="Self.fk_id_opcion_detalle_persona">
+            <End Role="tb_opcion_detalle_persona" EntitySet="tb_opcion_detalle_persona" />
+            <End Role="tb_valor_opcion_detalle_persona" EntitySet="tb_valor_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_persona" Association="Self.fk_id_rol_persona">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_subgrupo_victima" Association="Self.fk_id_subgrupo_victima">
+            <End Role="tb_subgrupo_victima" EntitySet="tb_subgrupo_victima" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_identificacion_persona" Association="Self.fk_id_tipo_identificacion_persona">
+            <End Role="tb_tipo_identificacion" EntitySet="tb_tipo_identificacion" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_muerte" Association="Self.fk_id_tipo_muerte">
+            <End Role="tb_tipo_muerte" EntitySet="tb_tipo_muerte" />
+            <End Role="tb_persona" EntitySet="tb_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_valor_opcion_detalle_persona" Association="Self.fk_valor_opcion_detalle_persona">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_valor_opcion_detalle_persona" EntitySet="tb_valor_opcion_detalle_persona" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_persona_juridica" Association="Self.fk_id_rol_persona_juridica">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_persona_juridica" EntitySet="tb_persona_juridica" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_rol_vehiculo" Association="Self.fk_id_rol_vehiculo">
+            <End Role="tb_rol" EntitySet="tb_rol" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipo_subtipo" Association="Self.fk_tipo_subtipo">
+            <End Role="tb_tipo" EntitySet="tb_tipo" />
+            <End Role="tb_subtipo" EntitySet="tb_subtipo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_victima_subvictima" Association="Self.fk_victima_subvictima">
+            <End Role="tb_victima" EntitySet="tb_victima" />
+            <End Role="tb_subvictima" EntitySet="tb_subvictima" />
+          </AssociationSet>
+          <AssociationSet Name="fk_id_tipo_identificacion_vehiculo" Association="Self.fk_id_tipo_identificacion_vehiculo">
+            <End Role="tb_tipo_identificacion" EntitySet="tb_tipo_identificacion" />
+            <End Role="tb_vehiculo" EntitySet="tb_vehiculo" />
+          </AssociationSet>
+          <AssociationSet Name="tb_delito_secundario_informacion_basica" Association="Self.tb_delito_secundario_informacion_basica">
+            <End Role="tb_delito_secundario" EntitySet="tb_delito_secundario" />
+            <End Role="tb_informacion_basica" EntitySet="tb_informacion_basica" />
+          </AssociationSet>
+          <AssociationSet Name="tb_poblacion_vulnerable_persona" Association="Self.tb_poblacion_vulnerable_persona">
+            <End Role="tb_persona" EntitySet="tb_persona" />
+            <End Role="tb_poblacion_vulnerable" EntitySet="tb_poblacion_vulnerable" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_tarea3_pruebaModelStoreContainer" CdmEntityContainer="db_tarea3_pruebaEntities">
-          <EntitySetMapping Name="tbPerson">
-            <EntityTypeMapping TypeName="db_tarea3_pruebaModel.tbPerson">
-              <MappingFragment StoreEntitySet="tbPerson">
+        <EntityContainerMapping StorageEntityContainer="db_b51795_b51330ModelStoreContainer" CdmEntityContainer="db_b51795_b51330Entities">
+          <EntitySetMapping Name="tb_alias">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_alias">
+              <MappingFragment StoreEntitySet="tb_alias">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_aseguradora">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_aseguradora">
+              <MappingFragment StoreEntitySet="tb_aseguradora">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tb_caseta">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_caseta">
+              <MappingFragment StoreEntitySet="tb_caseta">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_categoria_delito">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_categoria_delito">
+              <MappingFragment StoreEntitySet="tb_categoria_delito">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_clase">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_clase">
+              <MappingFragment StoreEntitySet="tb_clase">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_color">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_color">
+              <MappingFragment StoreEntitySet="tb_color">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_delegacion">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_delegacion">
+              <MappingFragment StoreEntitySet="tb_delegacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_delito_secundario">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_delito_secundario">
+              <MappingFragment StoreEntitySet="tb_delito_secundario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_detalle_persona">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_detalle_persona">
+              <MappingFragment StoreEntitySet="tb_detalle_persona">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="caracteristica" ColumnName="caracteristica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_estado">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_estado">
+              <MappingFragment StoreEntitySet="tb_estado">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_estado_civil">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_estado_civil">
+              <MappingFragment StoreEntitySet="tb_estado_civil">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_funcion">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_funcion">
+              <MappingFragment StoreEntitySet="tb_funcion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_hecho">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_hecho">
+              <MappingFragment StoreEntitySet="tb_hecho">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="canton" ColumnName="canton" />
+                <ScalarProperty Name="distrito" ColumnName="distrito" />
+                <ScalarProperty Name="barrio" ColumnName="barrio" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+                <ScalarProperty Name="icono" ColumnName="icono" />
+                <ScalarProperty Name="avenida" ColumnName="avenida" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="senas" ColumnName="senas" />
+                <ScalarProperty Name="x" ColumnName="x" />
+                <ScalarProperty Name="y" ColumnName="y" />
+                <ScalarProperty Name="id_tipo_ubicacion" ColumnName="id_tipo_ubicacion" />
+                <ScalarProperty Name="id_proyeccion" ColumnName="id_proyeccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_imagen">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_imagen">
+              <MappingFragment StoreEntitySet="tb_imagen">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="id_informacion_imagen" ColumnName="id_informacion_imagen" />
+                <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+                <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+                <ScalarProperty Name="id_objeto" ColumnName="id_objeto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_informacion_basica">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_informacion_basica">
+              <MappingFragment StoreEntitySet="tb_informacion_basica">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_origen" ColumnName="id_origen" />
+                <ScalarProperty Name="numero_unico" ColumnName="numero_unico" />
+                <ScalarProperty Name="id_subcategoria_delito" ColumnName="id_subcategoria_delito" />
+                <ScalarProperty Name="id_modalidad" ColumnName="id_modalidad" />
+                <ScalarProperty Name="id_subvictima" ColumnName="id_subvictima" />
+                <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+                <ScalarProperty Name="id_oficina_encargado" ColumnName="id_oficina_encargado" />
+                <ScalarProperty Name="id_delegacion" ColumnName="id_delegacion" />
+                <ScalarProperty Name="perjuicio" ColumnName="perjuicio" />
+                <ScalarProperty Name="moneda" ColumnName="moneda" />
+                <ScalarProperty Name="tentativo" ColumnName="tentativo" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="narracion" ColumnName="narracion" />
+                <ScalarProperty Name="id_hecho" ColumnName="id_hecho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_informacion_imagen">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_informacion_imagen">
+              <MappingFragment StoreEntitySet="tb_informacion_imagen">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_intensidad">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_intensidad">
+              <MappingFragment StoreEntitySet="tb_intensidad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_marca">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_marca">
+              <MappingFragment StoreEntitySet="tb_marca">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_modalidad">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_modalidad">
+              <MappingFragment StoreEntitySet="tb_modalidad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_nombre_fantasia">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_nombre_fantasia">
+              <MappingFragment StoreEntitySet="tb_nombre_fantasia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_objeto">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_objeto">
+              <MappingFragment StoreEntitySet="tb_objeto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_subtipo" ColumnName="id_subtipo" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="modelo" ColumnName="modelo" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="id_color" ColumnName="id_color" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+                <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+                <ScalarProperty Name="atributo" ColumnName="atributo" />
+                <ScalarProperty Name="decomisado" ColumnName="decomisado" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_oficial_policia">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_oficial_policia">
+              <MappingFragment StoreEntitySet="tb_oficial_policia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_policia" ColumnName="id_policia" />
+                <ScalarProperty Name="id_unidad" ColumnName="id_unidad" />
+                <ScalarProperty Name="id_placa" ColumnName="id_placa" />
+                <ScalarProperty Name="id_caseta" ColumnName="id_caseta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_oficina_encargado">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_oficina_encargado">
+              <MappingFragment StoreEntitySet="tb_oficina_encargado">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_opcion_detalle_persona">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_opcion_detalle_persona">
+              <MappingFragment StoreEntitySet="tb_opcion_detalle_persona">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_detalle_persona" ColumnName="id_detalle_persona" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_origen">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_origen">
+              <MappingFragment StoreEntitySet="tb_origen">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_persona">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_persona">
+              <MappingFragment StoreEntitySet="tb_persona">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_tipo_identificacion" ColumnName="id_tipo_identificacion" />
+                <ScalarProperty Name="numero_identificacion" ColumnName="numero_identificacion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+                <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+                <ScalarProperty Name="id_estado_civil" ColumnName="id_estado_civil" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+                <ScalarProperty Name="detenido" ColumnName="detenido" />
+                <ScalarProperty Name="desaparecido" ColumnName="desaparecido" />
+                <ScalarProperty Name="revisado_reten" ColumnName="revisado_reten" />
+                <ScalarProperty Name="oficio_profesion" ColumnName="oficio_profesion" />
+                <ScalarProperty Name="expediente_criminal" ColumnName="expediente_criminal" />
+                <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="id_subgrupo_victima" ColumnName="id_subgrupo_victima" />
+                <ScalarProperty Name="numero_autopsia" ColumnName="numero_autopsia" />
+                <ScalarProperty Name="id_tipo_muerte" ColumnName="id_tipo_muerte" />
+                <ScalarProperty Name="id_funcion" ColumnName="id_funcion" />
+                <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+                <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+                <ScalarProperty Name="atributo" ColumnName="atributo" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+                <ScalarProperty Name="id_oficial_policia" ColumnName="id_oficial_policia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_persona_juridica">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_persona_juridica">
+              <MappingFragment StoreEntitySet="tb_persona_juridica">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cedula_juridica" ColumnName="cedula_juridica" />
+                <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+                <ScalarProperty Name="id_nombre_fantasia" ColumnName="id_nombre_fantasia" />
+                <ScalarProperty Name="filial" ColumnName="filial" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+                <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+                <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+                <ScalarProperty Name="atributo" ColumnName="atributo" />
+                <ScalarProperty Name="allanada" ColumnName="allanada" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_placa">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_placa">
+              <MappingFragment StoreEntitySet="tb_placa">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_poblacion_vulnerable">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_poblacion_vulnerable">
+              <MappingFragment StoreEntitySet="tb_poblacion_vulnerable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_policia">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_policia">
+              <MappingFragment StoreEntitySet="tb_policia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_proyeccion">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_proyeccion">
+              <MappingFragment StoreEntitySet="tb_proyeccion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_rol">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_rol">
+              <MappingFragment StoreEntitySet="tb_rol">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_subcategoria_delito">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subcategoria_delito">
+              <MappingFragment StoreEntitySet="tb_subcategoria_delito">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_categoria_delito" ColumnName="id_categoria_delito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_subgrupo_victima">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subgrupo_victima">
+              <MappingFragment StoreEntitySet="tb_subgrupo_victima">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_subtipo">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subtipo">
+              <MappingFragment StoreEntitySet="tb_subtipo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_subtipo" ColumnName="id_subtipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_subvictima">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subvictima">
+              <MappingFragment StoreEntitySet="tb_subvictima">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_victima" ColumnName="id_victima" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_tipo">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo">
+              <MappingFragment StoreEntitySet="tb_tipo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_tipo_identificacion">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_identificacion">
+              <MappingFragment StoreEntitySet="tb_tipo_identificacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_tipo_muerte">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_muerte">
+              <MappingFragment StoreEntitySet="tb_tipo_muerte">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_tipo_ubicacion">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_ubicacion">
+              <MappingFragment StoreEntitySet="tb_tipo_ubicacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_unidad">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_unidad">
+              <MappingFragment StoreEntitySet="tb_unidad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_valor_opcion_detalle_persona">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_valor_opcion_detalle_persona">
+              <MappingFragment StoreEntitySet="tb_valor_opcion_detalle_persona">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="id_opcion_detalle_persona" ColumnName="id_opcion_detalle_persona" />
+                <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_vehiculo">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_vehiculo">
+              <MappingFragment StoreEntitySet="tb_vehiculo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_tipo_identificacion" ColumnName="id_tipo_identificacion" />
+                <ScalarProperty Name="numero_identificacion" ColumnName="numero_identificacion" />
+                <ScalarProperty Name="id_clase" ColumnName="id_clase" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="numero_bien" ColumnName="numero_bien" />
+                <ScalarProperty Name="anno" ColumnName="anno" />
+                <ScalarProperty Name="poliza" ColumnName="poliza" />
+                <ScalarProperty Name="decomisado" ColumnName="decomisado" />
+                <ScalarProperty Name="id_marca" ColumnName="id_marca" />
+                <ScalarProperty Name="id_color" ColumnName="id_color" />
+                <ScalarProperty Name="estilo" ColumnName="estilo" />
+                <ScalarProperty Name="id_aseguradora" ColumnName="id_aseguradora" />
+                <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+                <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+                <ScalarProperty Name="atributo" ColumnName="atributo" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_victima">
+            <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_victima">
+              <MappingFragment StoreEntitySet="tb_victima">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="tb_delito_secundario_informacion_basica" TypeName="db_b51795_b51330Model.tb_delito_secundario_informacion_basica" StoreEntitySet="tb_delito_secundario_informacion_basica">
+            <EndProperty Name="tb_delito_secundario">
+              <ScalarProperty Name="id" ColumnName="id_delito_secundario" />
+            </EndProperty>
+            <EndProperty Name="tb_informacion_basica">
+              <ScalarProperty Name="id" ColumnName="id_informacion_basica" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="tb_poblacion_vulnerable_persona" TypeName="db_b51795_b51330Model.tb_poblacion_vulnerable_persona" StoreEntitySet="tb_poblacion_vulnerable_persona">
+            <EndProperty Name="tb_persona">
+              <ScalarProperty Name="id" ColumnName="id_persona" />
+            </EndProperty>
+            <EndProperty Name="tb_poblacion_vulnerable">
+              <ScalarProperty Name="id" ColumnName="id_poblacion_vulnerable" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

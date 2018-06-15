@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'c:\users\diego\documents\visual studio 2015\Projects\IngenieriaTarea\Infraestructure.Data\Model\IngenieriaTareaModel.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\Model\IngenieriaTareaModel.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

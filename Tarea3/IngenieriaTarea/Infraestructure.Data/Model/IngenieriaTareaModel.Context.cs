@@ -7,17 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Infraestructure.Data.Model
+namespace Domain.Entities
 {
-    using Domain.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
-    public partial class db_tarea3_pruebaEntities : DbContext
+    
+    public partial class db_b51795_b51330Entities : DbContext
     {
-        public db_tarea3_pruebaEntities()
-            : base("name=db_tarea3_pruebaEntities")
+        public db_b51795_b51330Entities()
+            : base("name=db_b51795_b51330Entities")
         {
         }
     
@@ -26,6 +25,49 @@ namespace Infraestructure.Data.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tbPerson> tbPerson { get; set; }
+        public virtual DbSet<tb_alias> tb_alias { get; set; }
+        public virtual DbSet<tb_aseguradora> tb_aseguradora { get; set; }
+        public virtual DbSet<tb_caseta> tb_caseta { get; set; }
+        public virtual DbSet<tb_categoria_delito> tb_categoria_delito { get; set; }
+        public virtual DbSet<tb_clase> tb_clase { get; set; }
+        public virtual DbSet<tb_color> tb_color { get; set; }
+        public virtual DbSet<tb_delegacion> tb_delegacion { get; set; }
+        public virtual DbSet<tb_delito_secundario> tb_delito_secundario { get; set; }
+        public virtual DbSet<tb_detalle_persona> tb_detalle_persona { get; set; }
+        public virtual DbSet<tb_estado> tb_estado { get; set; }
+        public virtual DbSet<tb_estado_civil> tb_estado_civil { get; set; }
+        public virtual DbSet<tb_funcion> tb_funcion { get; set; }
+        public virtual DbSet<tb_hecho> tb_hecho { get; set; }
+        public virtual DbSet<tb_imagen> tb_imagen { get; set; }
+        public virtual DbSet<tb_informacion_basica> tb_informacion_basica { get; set; }
+        public virtual DbSet<tb_informacion_imagen> tb_informacion_imagen { get; set; }
+        public virtual DbSet<tb_intensidad> tb_intensidad { get; set; }
+        public virtual DbSet<tb_marca> tb_marca { get; set; }
+        public virtual DbSet<tb_modalidad> tb_modalidad { get; set; }
+        public virtual DbSet<tb_nombre_fantasia> tb_nombre_fantasia { get; set; }
+        public virtual DbSet<tb_objeto> tb_objeto { get; set; }
+        public virtual DbSet<tb_oficial_policia> tb_oficial_policia { get; set; }
+        public virtual DbSet<tb_oficina_encargado> tb_oficina_encargado { get; set; }
+        public virtual DbSet<tb_opcion_detalle_persona> tb_opcion_detalle_persona { get; set; }
+        public virtual DbSet<tb_origen> tb_origen { get; set; }
+        public virtual DbSet<tb_persona> tb_persona { get; set; }
+        public virtual DbSet<tb_persona_juridica> tb_persona_juridica { get; set; }
+        public virtual DbSet<tb_placa> tb_placa { get; set; }
+        public virtual DbSet<tb_poblacion_vulnerable> tb_poblacion_vulnerable { get; set; }
+        public virtual DbSet<tb_policia> tb_policia { get; set; }
+        public virtual DbSet<tb_proyeccion> tb_proyeccion { get; set; }
+        public virtual DbSet<tb_rol> tb_rol { get; set; }
+        public virtual DbSet<tb_subcategoria_delito> tb_subcategoria_delito { get; set; }
+        public virtual DbSet<tb_subgrupo_victima> tb_subgrupo_victima { get; set; }
+        public virtual DbSet<tb_subtipo> tb_subtipo { get; set; }
+        public virtual DbSet<tb_subvictima> tb_subvictima { get; set; }
+        public virtual DbSet<tb_tipo> tb_tipo { get; set; }
+        public virtual DbSet<tb_tipo_identificacion> tb_tipo_identificacion { get; set; }
+        public virtual DbSet<tb_tipo_muerte> tb_tipo_muerte { get; set; }
+        public virtual DbSet<tb_tipo_ubicacion> tb_tipo_ubicacion { get; set; }
+        public virtual DbSet<tb_unidad> tb_unidad { get; set; }
+        public virtual DbSet<tb_valor_opcion_detalle_persona> tb_valor_opcion_detalle_persona { get; set; }
+        public virtual DbSet<tb_vehiculo> tb_vehiculo { get; set; }
+        public virtual DbSet<tb_victima> tb_victima { get; set; }
     }
 }

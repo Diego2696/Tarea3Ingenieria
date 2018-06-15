@@ -4,8 +4,100 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="84b049e3493441099dc33e0c34c7b31d" Name="Diagram1">
-        <EntityTypeShape EntityType="db_tarea3_pruebaModel.tbPerson" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="743232083315454eb049fc7ce29d2cb9" Name="Diagram1">
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_alias" Width="1.5" PointX="11.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_aseguradora" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_caseta" Width="1.5" PointX="4.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_categoria_delito" Width="1.5" PointX="11.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_clase" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_color" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_delegacion" Width="1.5" PointX="14" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_delito_secundario" Width="1.5" PointX="14" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_detalle_persona" Width="1.5" PointX="9.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_estado" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_estado_civil" Width="1.5" PointX="6.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_funcion" Width="1.5" PointX="6.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_hecho" Width="1.5" PointX="14" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_imagen" Width="1.5" PointX="11.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_informacion_basica" Width="1.5" PointX="16.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_informacion_imagen" Width="1.5" PointX="9" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_intensidad" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_marca" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_modalidad" Width="1.5" PointX="14" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_nombre_fantasia" Width="1.5" PointX="3.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_objeto" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_oficial_policia" Width="1.5" PointX="6.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_oficina_encargado" Width="1.5" PointX="14" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_opcion_detalle_persona" Width="1.5" PointX="12" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_origen" Width="1.5" PointX="14" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_persona" Width="1.5" PointX="9" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_persona_juridica" Width="1.5" PointX="6" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_placa" Width="1.5" PointX="4.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_poblacion_vulnerable" Width="1.5" PointX="11.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_policia" Width="1.5" PointX="4.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_proyeccion" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_rol" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_subcategoria_delito" Width="1.5" PointX="14" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_subgrupo_victima" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_subtipo" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_subvictima" Width="1.5" PointX="14" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_tipo" Width="1.5" PointX="1.5" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_tipo_identificacion" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_tipo_muerte" Width="1.5" PointX="6.75" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_tipo_ubicacion" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_unidad" Width="1.5" PointX="4.5" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_valor_opcion_detalle_persona" Width="1.5" PointX="14.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_vehiculo" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_b51795_b51330Model.tb_victima" Width="1.5" PointX="11.75" PointY="31.5" IsExpanded="true" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_persona_alias" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_aseguradora" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_caseta" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_categoria_subcategoria_delito" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_clase" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_color_objeto" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_color_vehiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_delegacion" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_detalle_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_estado_civil" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_funcion" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_hecho" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_proyeccion" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_tipo_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_informacion_imagen" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_objeto" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_persona_imagen" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_vehiculo_imagen" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_modalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_oficina_encargado" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_origen" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_subcategoria_delito" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_subvictima" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_intensidad_objeto" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_intensidad_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_intensidad_persona_juridica" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_intensidad_vehiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_marca" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_nombre_fantasia" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_rol_objeto" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_subtipo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_oficial_policia" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_placa" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_policia" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_unidad" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_opcion_detalle_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_rol_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_subgrupo_victima" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_tipo_identificacion_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_tipo_muerte" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_valor_opcion_detalle_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_rol_persona_juridica" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_rol_vehiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_tipo_subtipo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_victima_subvictima" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.fk_id_tipo_identificacion_vehiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.tb_delito_secundario_informacion_basica" ManuallyRouted="false" />
+        <AssociationConnector Association="db_b51795_b51330Model.tb_poblacion_vulnerable_persona" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

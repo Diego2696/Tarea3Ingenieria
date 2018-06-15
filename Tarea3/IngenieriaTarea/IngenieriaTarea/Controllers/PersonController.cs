@@ -13,15 +13,15 @@ using System;
 
 namespace IngenieriaTarea.Controllers
 {
-    [RoutePrefix("api/Person")]
+    [RoutePrefix("api/person")]
     public class PersonController : ApiController
     {
         [Route("")]
         [HttpGet]
-        [ResponseType(typeof(Response<List<tbPerson>>))]
+        [ResponseType(typeof(Response<List<tb_persona>>))]
         public IHttpActionResult GetPerson()
         {
-            Response<List<tbPerson>> response = new Response<List<tbPerson>>();
+            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
 
             var userLN = FactoryIoC.Container.Resolver<ControlPerson>();
 
@@ -34,10 +34,10 @@ namespace IngenieriaTarea.Controllers
 
         [Route("{id}")]
         [HttpGet]
-        [ResponseType(typeof(Response<tbPerson>))]
+        [ResponseType(typeof(Response<tb_persona>))]
         public IHttpActionResult GetPerson(int id)
         {
-            Response<tbPerson> response = new Response<tbPerson>();
+            Response<tb_persona> response = new Response<tb_persona>();
 
             var userLN = FactoryIoC.Container.Resolver<ControlPerson>();
 
@@ -66,8 +66,8 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tbPerson>))]
-        public IHttpActionResult InsertPerson([FromBody]tbPerson user)
+        [ResponseType(typeof(Response<tb_persona>))]
+        public IHttpActionResult InsertPerson([FromBody]tb_persona user)
         {
 
             ControlPerson userLN = FactoryIoC.Container.Resolver<ControlPerson>();
@@ -81,8 +81,8 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tbPerson>))]
-        public IHttpActionResult UpdatePerson([FromBody]tbPerson user)
+        [ResponseType(typeof(Response<tb_persona>))]
+        public IHttpActionResult UpdatePerson([FromBody]tb_persona user)
         {
             ControlPerson userLN = FactoryIoC.Container.Resolver<ControlPerson>();
 

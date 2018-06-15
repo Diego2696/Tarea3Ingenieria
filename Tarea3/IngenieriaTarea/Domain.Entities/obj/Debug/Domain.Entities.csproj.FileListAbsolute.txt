@@ -2,3 +2,8 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.Enti
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.Entities\bin\Debug\Domain.Entities.pdb
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.Entities\obj\Debug\Domain.Entities.dll
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain.Entities\obj\Debug\Domain.Entities.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Entities\bin\Debug\Domain.Entities.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Entities\bin\Debug\Domain.Entities.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Entities\obj\Debug\Domain.Entities.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Entities\obj\Debug\Domain.Entities.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Entities\obj\Debug\Domain.Entities.pdb

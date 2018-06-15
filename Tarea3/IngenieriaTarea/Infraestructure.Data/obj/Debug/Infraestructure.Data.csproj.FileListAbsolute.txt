@@ -12,3 +12,17 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Infraestruc
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Infraestructure.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Infraestructure.Data\obj\Debug\Infraestructure.Data.dll
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Infraestructure.Data\obj\Debug\Infraestructure.Data.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Infraestructure.Data.dll.config
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Infraestructure.Data.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Infraestructure.Data.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Domain.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Domain.Entities.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\EntityFramework.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Domain.Entities.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\Domain.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\EntityFramework.xml
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\obj\Debug\Infraestructure.Data.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\obj\Debug\Infraestructure.Data.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Data\obj\Debug\Infraestructure.Data.pdb

@@ -1,13 +1,478 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="db_tarea3_pruebaModelStoreContainer" CdmEntityContainer="db_tarea3_pruebaEntities">
-    <EntitySetMapping Name="tbPerson">
-      <EntityTypeMapping TypeName="db_tarea3_pruebaModel.tbPerson">
-        <MappingFragment StoreEntitySet="tbPerson">
+  <EntityContainerMapping StorageEntityContainer="db_b51795_b51330ModelStoreContainer" CdmEntityContainer="db_b51795_b51330Entities">
+    <EntitySetMapping Name="tb_alias">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_alias">
+        <MappingFragment StoreEntitySet="tb_alias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_aseguradora">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_aseguradora">
+        <MappingFragment StoreEntitySet="tb_aseguradora">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_caseta">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_caseta">
+        <MappingFragment StoreEntitySet="tb_caseta">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_categoria_delito">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_categoria_delito">
+        <MappingFragment StoreEntitySet="tb_categoria_delito">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_clase">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_clase">
+        <MappingFragment StoreEntitySet="tb_clase">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_color">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_color">
+        <MappingFragment StoreEntitySet="tb_color">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_delegacion">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_delegacion">
+        <MappingFragment StoreEntitySet="tb_delegacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_delito_secundario">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_delito_secundario">
+        <MappingFragment StoreEntitySet="tb_delito_secundario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_detalle_persona">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_detalle_persona">
+        <MappingFragment StoreEntitySet="tb_detalle_persona">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="caracteristica" ColumnName="caracteristica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_estado">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_estado">
+        <MappingFragment StoreEntitySet="tb_estado">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_estado_civil">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_estado_civil">
+        <MappingFragment StoreEntitySet="tb_estado_civil">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_funcion">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_funcion">
+        <MappingFragment StoreEntitySet="tb_funcion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_hecho">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_hecho">
+        <MappingFragment StoreEntitySet="tb_hecho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="provincia" ColumnName="provincia" />
+          <ScalarProperty Name="canton" ColumnName="canton" />
+          <ScalarProperty Name="distrito" ColumnName="distrito" />
+          <ScalarProperty Name="barrio" ColumnName="barrio" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="icono" ColumnName="icono" />
+          <ScalarProperty Name="avenida" ColumnName="avenida" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="senas" ColumnName="senas" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+          <ScalarProperty Name="id_tipo_ubicacion" ColumnName="id_tipo_ubicacion" />
+          <ScalarProperty Name="id_proyeccion" ColumnName="id_proyeccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_imagen">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_imagen">
+        <MappingFragment StoreEntitySet="tb_imagen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="id_informacion_imagen" ColumnName="id_informacion_imagen" />
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+          <ScalarProperty Name="id_objeto" ColumnName="id_objeto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_informacion_basica">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_informacion_basica">
+        <MappingFragment StoreEntitySet="tb_informacion_basica">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_origen" ColumnName="id_origen" />
+          <ScalarProperty Name="numero_unico" ColumnName="numero_unico" />
+          <ScalarProperty Name="id_subcategoria_delito" ColumnName="id_subcategoria_delito" />
+          <ScalarProperty Name="id_modalidad" ColumnName="id_modalidad" />
+          <ScalarProperty Name="id_subvictima" ColumnName="id_subvictima" />
+          <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+          <ScalarProperty Name="id_oficina_encargado" ColumnName="id_oficina_encargado" />
+          <ScalarProperty Name="id_delegacion" ColumnName="id_delegacion" />
+          <ScalarProperty Name="perjuicio" ColumnName="perjuicio" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="tentativo" ColumnName="tentativo" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="narracion" ColumnName="narracion" />
+          <ScalarProperty Name="id_hecho" ColumnName="id_hecho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_informacion_imagen">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_informacion_imagen">
+        <MappingFragment StoreEntitySet="tb_informacion_imagen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_intensidad">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_intensidad">
+        <MappingFragment StoreEntitySet="tb_intensidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_marca">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_marca">
+        <MappingFragment StoreEntitySet="tb_marca">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_modalidad">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_modalidad">
+        <MappingFragment StoreEntitySet="tb_modalidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_nombre_fantasia">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_nombre_fantasia">
+        <MappingFragment StoreEntitySet="tb_nombre_fantasia">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_objeto">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_objeto">
+        <MappingFragment StoreEntitySet="tb_objeto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_subtipo" ColumnName="id_subtipo" />
+          <ScalarProperty Name="serie" ColumnName="serie" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+          <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+          <ScalarProperty Name="atributo" ColumnName="atributo" />
+          <ScalarProperty Name="decomisado" ColumnName="decomisado" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_oficial_policia">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_oficial_policia">
+        <MappingFragment StoreEntitySet="tb_oficial_policia">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_policia" ColumnName="id_policia" />
+          <ScalarProperty Name="id_unidad" ColumnName="id_unidad" />
+          <ScalarProperty Name="id_placa" ColumnName="id_placa" />
+          <ScalarProperty Name="id_caseta" ColumnName="id_caseta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_oficina_encargado">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_oficina_encargado">
+        <MappingFragment StoreEntitySet="tb_oficina_encargado">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_opcion_detalle_persona">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_opcion_detalle_persona">
+        <MappingFragment StoreEntitySet="tb_opcion_detalle_persona">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_detalle_persona" ColumnName="id_detalle_persona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_origen">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_origen">
+        <MappingFragment StoreEntitySet="tb_origen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_persona">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_persona">
+        <MappingFragment StoreEntitySet="tb_persona">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_tipo_identificacion" ColumnName="id_tipo_identificacion" />
+          <ScalarProperty Name="numero_identificacion" ColumnName="numero_identificacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+          <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+          <ScalarProperty Name="id_estado_civil" ColumnName="id_estado_civil" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+          <ScalarProperty Name="detenido" ColumnName="detenido" />
+          <ScalarProperty Name="desaparecido" ColumnName="desaparecido" />
+          <ScalarProperty Name="revisado_reten" ColumnName="revisado_reten" />
+          <ScalarProperty Name="oficio_profesion" ColumnName="oficio_profesion" />
+          <ScalarProperty Name="expediente_criminal" ColumnName="expediente_criminal" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="id_subgrupo_victima" ColumnName="id_subgrupo_victima" />
+          <ScalarProperty Name="numero_autopsia" ColumnName="numero_autopsia" />
+          <ScalarProperty Name="id_tipo_muerte" ColumnName="id_tipo_muerte" />
+          <ScalarProperty Name="id_funcion" ColumnName="id_funcion" />
+          <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+          <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+          <ScalarProperty Name="atributo" ColumnName="atributo" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="id_oficial_policia" ColumnName="id_oficial_policia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_persona_juridica">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_persona_juridica">
+        <MappingFragment StoreEntitySet="tb_persona_juridica">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cedula_juridica" ColumnName="cedula_juridica" />
+          <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+          <ScalarProperty Name="id_nombre_fantasia" ColumnName="id_nombre_fantasia" />
+          <ScalarProperty Name="filial" ColumnName="filial" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+          <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+          <ScalarProperty Name="atributo" ColumnName="atributo" />
+          <ScalarProperty Name="allanada" ColumnName="allanada" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_placa">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_placa">
+        <MappingFragment StoreEntitySet="tb_placa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_poblacion_vulnerable">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_poblacion_vulnerable">
+        <MappingFragment StoreEntitySet="tb_poblacion_vulnerable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_policia">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_policia">
+        <MappingFragment StoreEntitySet="tb_policia">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_proyeccion">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_proyeccion">
+        <MappingFragment StoreEntitySet="tb_proyeccion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_rol">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_rol">
+        <MappingFragment StoreEntitySet="tb_rol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_subcategoria_delito">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subcategoria_delito">
+        <MappingFragment StoreEntitySet="tb_subcategoria_delito">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_categoria_delito" ColumnName="id_categoria_delito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_subgrupo_victima">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subgrupo_victima">
+        <MappingFragment StoreEntitySet="tb_subgrupo_victima">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_subtipo">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subtipo">
+        <MappingFragment StoreEntitySet="tb_subtipo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_subtipo" ColumnName="id_subtipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_subvictima">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_subvictima">
+        <MappingFragment StoreEntitySet="tb_subvictima">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_victima" ColumnName="id_victima" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo">
+        <MappingFragment StoreEntitySet="tb_tipo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_identificacion">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_identificacion">
+        <MappingFragment StoreEntitySet="tb_tipo_identificacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_muerte">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_muerte">
+        <MappingFragment StoreEntitySet="tb_tipo_muerte">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_ubicacion">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_tipo_ubicacion">
+        <MappingFragment StoreEntitySet="tb_tipo_ubicacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_unidad">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_unidad">
+        <MappingFragment StoreEntitySet="tb_unidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_valor_opcion_detalle_persona">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_valor_opcion_detalle_persona">
+        <MappingFragment StoreEntitySet="tb_valor_opcion_detalle_persona">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id_opcion_detalle_persona" ColumnName="id_opcion_detalle_persona" />
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_vehiculo">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_vehiculo">
+        <MappingFragment StoreEntitySet="tb_vehiculo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_tipo_identificacion" ColumnName="id_tipo_identificacion" />
+          <ScalarProperty Name="numero_identificacion" ColumnName="numero_identificacion" />
+          <ScalarProperty Name="id_clase" ColumnName="id_clase" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="numero_bien" ColumnName="numero_bien" />
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="poliza" ColumnName="poliza" />
+          <ScalarProperty Name="decomisado" ColumnName="decomisado" />
+          <ScalarProperty Name="id_marca" ColumnName="id_marca" />
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+          <ScalarProperty Name="estilo" ColumnName="estilo" />
+          <ScalarProperty Name="id_aseguradora" ColumnName="id_aseguradora" />
+          <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+          <ScalarProperty Name="id_intensidad" ColumnName="id_intensidad" />
+          <ScalarProperty Name="atributo" ColumnName="atributo" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_victima">
+      <EntityTypeMapping TypeName="db_b51795_b51330Model.tb_victima">
+        <MappingFragment StoreEntitySet="tb_victima">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tb_delito_secundario_informacion_basica" TypeName="db_b51795_b51330Model.tb_delito_secundario_informacion_basica" StoreEntitySet="tb_delito_secundario_informacion_basica">
+      <EndProperty Name="tb_delito_secundario">
+        <ScalarProperty Name="id" ColumnName="id_delito_secundario" />
+      </EndProperty>
+      <EndProperty Name="tb_informacion_basica">
+        <ScalarProperty Name="id" ColumnName="id_informacion_basica" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_poblacion_vulnerable_persona" TypeName="db_b51795_b51330Model.tb_poblacion_vulnerable_persona" StoreEntitySet="tb_poblacion_vulnerable_persona">
+      <EndProperty Name="tb_persona">
+        <ScalarProperty Name="id" ColumnName="id_persona" />
+      </EndProperty>
+      <EndProperty Name="tb_poblacion_vulnerable">
+        <ScalarProperty Name="id" ColumnName="id_poblacion_vulnerable" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

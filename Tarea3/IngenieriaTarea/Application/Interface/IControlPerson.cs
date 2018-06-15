@@ -10,10 +10,10 @@ namespace Application.Interface
 {
     public interface IControlPerson
     {
-        Response<List<tbPerson>> lfGet();
-        Response<tbPerson> lfGet(int id);
-        Response<tbPerson> lfInsert(tbPerson person);
-        Response<tbPerson> lfUpdate(tbPerson person);
+        Response<List<tb_persona>> lfGet();
+        Response<tb_persona> lfGet(int id);
+        Response<tb_persona> lfInsert(tb_persona person);
+        Response<tb_persona> lfUpdate(tb_persona person);
         Response<bool> lfDelete(int id);
     }
 }

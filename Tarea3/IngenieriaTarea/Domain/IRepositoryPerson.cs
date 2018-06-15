@@ -9,10 +9,10 @@ namespace Domain
 {
     public interface IRepositoryPerson
     {
-        List<tbPerson> GetPerson();
-        tbPerson GetPersonById(tbPerson person);
-        tbPerson AddPerson(tbPerson person);
-        tbPerson UpdatePerson(tbPerson person);
-        Boolean DeletePerson(tbPerson person);
+        List<tb_persona> GetPerson();
+        tb_persona GetPersonById(tb_persona person);
+        tb_persona AddPerson(tb_persona person);
+        tb_persona UpdatePerson(tb_persona person);
+        Boolean DeletePerson(tb_persona person);
     }
 }
