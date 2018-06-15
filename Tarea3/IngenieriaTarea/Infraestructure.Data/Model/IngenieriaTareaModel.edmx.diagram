@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="743232083315454eb049fc7ce29d2cb9" Name="Diagram1">
+      <Diagram DiagramId="743232083315454eb049fc7ce29d2cb9" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="db_b51795_b51330Model.tb_alias" Width="1.5" PointX="11.25" PointY="13.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db_b51795_b51330Model.tb_aseguradora" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_b51795_b51330Model.tb_caseta" Width="1.5" PointX="4.5" PointY="18.75" IsExpanded="true" />
