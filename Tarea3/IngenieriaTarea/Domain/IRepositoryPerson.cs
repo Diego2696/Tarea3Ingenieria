@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IRepositoryPerson
+    public interface IRepositoryPerson : IGenericRepository<tb_persona>
     {
-        List<tb_persona> GetPerson();
-        tb_persona GetPersonById(tb_persona person);
-        tb_persona AddPerson(tb_persona person);
-        tb_persona UpdatePerson(tb_persona person);
-        Boolean DeletePerson(tb_persona person);
     }
 }

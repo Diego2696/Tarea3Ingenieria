@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IRepositoryVehiculo
+    public interface IRepositoryVehiculo : IGenericRepository<tb_vehiculo>
     {
-        List<tb_vehiculo> GetVehiculo();
-        tb_vehiculo GetVehiculoById(tb_vehiculo vehiculo);
-        tb_vehiculo AddVehiculo(tb_vehiculo vehiculo);
-        tb_vehiculo UpdateVehiculo(tb_vehiculo vehiculo);
-        Boolean DeleteVehiculo(tb_vehiculo vehiculo);
     }
 }

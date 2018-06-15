@@ -16,38 +16,6 @@ namespace IngenieriaTarea.Controllers
     [RoutePrefix("api/personaJuridica")]
     public class PersonaJuridicaController : ApiController
     {
-        [Route("")]
-        [HttpGet]
-        [ResponseType(typeof(Response<List<tb_persona_juridica>>))]
-        public IHttpActionResult GetPersonaJuridica()
-        {
-            Response<List<tb_persona_juridica>> response = new Response<List<tb_persona_juridica>>();
-
-            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
-
-            return Json(controlPersonaJuridica.lfGet(), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
-        [Route("{id}")]
-        [HttpGet]
-        [ResponseType(typeof(Response<tb_persona_juridica>))]
-        public IHttpActionResult GetPersonaJuridica(int id)
-        {
-            Response<tb_persona_juridica> response = new Response<tb_persona_juridica>();
-
-            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
-
-            return Json(controlPersonaJuridica.lfGet(id), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
@@ -66,12 +34,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tb_persona_juridica>))]
-        public IHttpActionResult InsertPerson([FromBody]tb_persona_juridica personaJuridica)
+        [ResponseType(typeof(Response<Boolean>))]
+        public IHttpActionResult InsertPersonaJuridica([FromBody]tb_persona_juridica personaJuridica)
         {
+            Response<Boolean> response = new Response<bool>();
 
-            ControlPersonaJuridica controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
-
+            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
             return Json(controlPersonaJuridica.lfInsert(personaJuridica), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -81,11 +49,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tb_persona_juridica>))]
-        public IHttpActionResult UpdatePerson([FromBody]tb_persona_juridica personaJuridica)
+        [ResponseType(typeof(Response<Boolean>))]
+        public IHttpActionResult UpdatePersonaJuridica([FromBody]tb_persona_juridica personaJuridica)
         {
-            ControlPersonaJuridica controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
+            Response<Boolean> response = new Response<bool>();
 
+            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
             return Json(controlPersonaJuridica.lfUpdate(personaJuridica), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -93,5 +62,36 @@ namespace IngenieriaTarea.Controllers
             });
         }
 
+        [Route("")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_persona_juridica>>))]
+        public IHttpActionResult GetPersonaJuridica()
+        {
+            Response<List<tb_persona_juridica>> response = new Response<List<tb_persona_juridica>>();
+
+            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
+
+            return Json(controlPersonaJuridica.lfGet(), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_persona_juridica>>))]
+        public IHttpActionResult GetPersonaJuridica(int id)
+        {
+            Response<List<tb_persona_juridica>> response = new Response<List<tb_persona_juridica>>();
+
+            var controlPersonaJuridica = FactoryIoC.Container.Resolver<ControlPersonaJuridica>();
+
+            return Json(controlPersonaJuridica.lfGet(id), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
     }
 }

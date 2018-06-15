@@ -11,9 +11,9 @@ namespace Application.Interface
     public interface IControlPerson
     {
         Response<List<tb_persona>> lfGet();
-        Response<tb_persona> lfGet(int id);
-        Response<tb_persona> lfInsert(tb_persona person);
-        Response<tb_persona> lfUpdate(tb_persona person);
+        Response<List<tb_persona>> lfGet(int id);
+        Response<bool> lfInsert(tb_persona persona);
+        Response<bool> lfUpdate(tb_persona persona);
         Response<bool> lfDelete(int id);
     }
 }

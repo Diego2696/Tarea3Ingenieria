@@ -25,6 +25,7 @@ namespace Infraestructure.IoC
             _unityContainer.RegisterType<IRepositoryPersonaJuridica, RepositoryPersonaJuridica>();
             _unityContainer.RegisterType<IRepositoryObjeto, RepositoryObjeto>();
             _unityContainer.RegisterType<IRepositoryInformacionBasica, RepositoryInformacionBasica>();
+            _unityContainer.RegisterType<IRepositoryColor, RepositoryColor>();
 
         }
 

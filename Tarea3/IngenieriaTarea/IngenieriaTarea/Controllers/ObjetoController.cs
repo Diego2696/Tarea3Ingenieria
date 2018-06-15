@@ -16,38 +16,6 @@ namespace IngenieriaTarea.Controllers
     [RoutePrefix("api/objeto")]
     public class ObjetoController : ApiController
     {
-        [Route("")]
-        [HttpGet]
-        [ResponseType(typeof(Response<List<tb_objeto>>))]
-        public IHttpActionResult GetObjeto()
-        {
-            Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
-
-            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
-
-            return Json(controlObjeto.lfGet(), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
-        [Route("{id}")]
-        [HttpGet]
-        [ResponseType(typeof(Response<tb_objeto>))]
-        public IHttpActionResult GetObjeto(int id)
-        {
-            Response<tb_objeto> response = new Response<tb_objeto>();
-
-            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
-
-            return Json(controlObjeto.lfGet(id), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
@@ -66,12 +34,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tb_objeto>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult InsertObjeto([FromBody]tb_objeto objeto)
         {
+            Response<Boolean> response = new Response<bool>();
 
-            ControlObjeto controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
-
+            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
             return Json(controlObjeto.lfInsert(objeto), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -81,11 +49,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tb_objeto>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult UpdateObjeto([FromBody]tb_objeto objeto)
         {
-            ControlObjeto controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
+            Response<Boolean> response = new Response<bool>();
 
+            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
             return Json(controlObjeto.lfUpdate(objeto), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -93,5 +62,36 @@ namespace IngenieriaTarea.Controllers
             });
         }
 
+        [Route("")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_objeto>>))]
+        public IHttpActionResult GetObjeto()
+        {
+            Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
+
+            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
+
+            return Json(controlObjeto.lfGet(), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_objeto>>))]
+        public IHttpActionResult GetObjeto(int id)
+        {
+            Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
+
+            var controlObjeto = FactoryIoC.Container.Resolver<ControlObjeto>();
+
+            return Json(controlObjeto.lfGet(id), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
     }
 }

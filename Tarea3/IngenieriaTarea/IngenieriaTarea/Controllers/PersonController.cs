@@ -16,38 +16,6 @@ namespace IngenieriaTarea.Controllers
     [RoutePrefix("api/persona")]
     public class PersonController : ApiController
     {
-        [Route("")]
-        [HttpGet]
-        [ResponseType(typeof(Response<List<tb_persona>>))]
-        public IHttpActionResult GetPersona()
-        {
-            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
-
-            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
-
-            return Json(controlPersona.lfGet(), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
-        [Route("{id}")]
-        [HttpGet]
-        [ResponseType(typeof(Response<tb_persona>))]
-        public IHttpActionResult GetPersona(int id)
-        {
-            Response<tb_persona> response = new Response<tb_persona>();
-
-            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
-
-            return Json(controlPersona.lfGet(id), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
@@ -66,12 +34,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tb_persona>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult InsertPersona([FromBody]tb_persona persona)
         {
+            Response<Boolean> response = new Response<bool>();
 
-            ControlPerson controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
-
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
             return Json(controlPersona.lfInsert(persona), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -81,11 +49,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tb_persona>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult UpdatePersona([FromBody]tb_persona persona)
         {
-            ControlPerson controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
+            Response<Boolean> response = new Response<bool>();
 
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
             return Json(controlPersona.lfUpdate(persona), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -93,5 +62,36 @@ namespace IngenieriaTarea.Controllers
             });
         }
 
+        [Route("")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_persona>>))]
+        public IHttpActionResult GetPersona()
+        {
+            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
+
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
+
+            return Json(controlPersona.lfGet(), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_persona>>))]
+        public IHttpActionResult GetPersona(int id)
+        {
+            Response<List<tb_persona>> response = new Response<List<tb_persona>>();
+
+            var controlPersona = FactoryIoC.Container.Resolver<ControlPerson>();
+
+            return Json(controlPersona.lfGet(id), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
     }
 }

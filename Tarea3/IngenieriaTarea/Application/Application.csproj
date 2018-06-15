@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\ControlColor.cs" />
     <Compile Include="Implementation\ControlInformacionBasica.cs" />
     <Compile Include="Implementation\ControlObjeto.cs" />
     <Compile Include="Implementation\ControlPerson.cs" />
     <Compile Include="Implementation\ControlPersonaJuridica.cs" />
     <Compile Include="Implementation\ControlVehiculo.cs" />
+    <Compile Include="Interface\IControlColor.cs" />
     <Compile Include="Interface\IControlInformacionBasica.cs" />
     <Compile Include="Interface\IControlObjeto.cs" />
     <Compile Include="Interface\IControlPerson.cs" />

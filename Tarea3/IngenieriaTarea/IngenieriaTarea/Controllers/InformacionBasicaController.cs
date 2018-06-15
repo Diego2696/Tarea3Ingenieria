@@ -16,38 +16,6 @@ namespace IngenieriaTarea.Controllers
     [RoutePrefix("api/informacionBasica")]
     public class InformacionBasicaController : ApiController
     {
-        [Route("")]
-        [HttpGet]
-        [ResponseType(typeof(Response<List<tb_informacion_basica>>))]
-        public IHttpActionResult GetInformacionBasica()
-        {
-            Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
-
-            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
-
-            return Json(controlInfoBasica.lfGet(), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
-        [Route("{id}")]
-        [HttpGet]
-        [ResponseType(typeof(Response<tb_informacion_basica>))]
-        public IHttpActionResult GetInformacionBasica(int id)
-        {
-            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
-
-            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
-
-            return Json(controlInfoBasica.lfGet(id), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
@@ -66,12 +34,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tb_informacion_basica>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult InsertInformacionBasica([FromBody]tb_informacion_basica infoBasica)
         {
+            Response<Boolean> response = new Response<bool>();
 
-            ControlInformacionBasica controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
-
+            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
             return Json(controlInfoBasica.lfInsert(infoBasica), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -81,12 +49,45 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tb_informacion_basica>))]
-        public IHttpActionResult UpdateInormacionBasica([FromBody]tb_informacion_basica infoBasica)
+        [ResponseType(typeof(Response<Boolean>))]
+        public IHttpActionResult UpdateInformacionBasica([FromBody]tb_informacion_basica infoBasica)
         {
-            ControlInformacionBasica controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
+            Response<Boolean> response = new Response<bool>();
 
+            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
             return Json(controlInfoBasica.lfUpdate(infoBasica), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_informacion_basica>>))]
+        public IHttpActionResult GetInformacionBasica()
+        {
+            Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
+
+            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
+
+            return Json(controlInfoBasica.lfGet(), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_informacion_basica>>))]
+        public IHttpActionResult GetInformacionBasica(int id)
+        {
+            Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
+
+            var controlInfoBasica = FactoryIoC.Container.Resolver<ControlInformacionBasica>();
+
+            return Json(controlInfoBasica.lfGet(id), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
                 Formatting = Formatting.Indented

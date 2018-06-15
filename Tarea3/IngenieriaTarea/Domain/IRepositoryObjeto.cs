@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IRepositoryObjeto
+    public interface IRepositoryObjeto : IGenericRepository<tb_objeto>
     {
-        List<tb_objeto> GetObjeto();
-        tb_objeto GetObjetoById(tb_objeto objeto);
-        tb_objeto AddObjeto(tb_objeto objeto);
-        tb_objeto UpdateObjeto(tb_objeto objeto);
-        Boolean DeleteObjeto(tb_objeto objeto);
     }
 }

@@ -16,38 +16,6 @@ namespace IngenieriaTarea.Controllers
     [RoutePrefix("api/vehiculo")]
     public class VehiculoController : ApiController
     {
-        [Route("")]
-        [HttpGet]
-        [ResponseType(typeof(Response<List<tb_vehiculo>>))]
-        public IHttpActionResult GetVehiculo()
-        {
-            Response<List<tb_vehiculo>> response = new Response<List<tb_vehiculo>>();
-
-            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
-
-            return Json(controlVehiculo.lfGet(), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
-        [Route("{id}")]
-        [HttpGet]
-        [ResponseType(typeof(Response<tb_vehiculo>))]
-        public IHttpActionResult GetVehiculo(int id)
-        {
-            Response<tb_vehiculo> response = new Response<tb_vehiculo>();
-
-            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
-
-            return Json(controlVehiculo.lfGet(id), new JsonSerializerSettings()
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-                Formatting = Formatting.Indented
-            });
-        }
-
         [Route("{id}")]
         [HttpDelete]
         [ResponseType(typeof(Response<Boolean>))]
@@ -66,12 +34,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPost]
-        [ResponseType(typeof(Response<tb_vehiculo>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult InsertVehiculo([FromBody]tb_vehiculo vehiculo)
         {
+            Response<Boolean> response = new Response<bool>();
 
-            ControlVehiculo controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
-
+            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
             return Json(controlVehiculo.lfInsert(vehiculo), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -81,11 +49,12 @@ namespace IngenieriaTarea.Controllers
 
         [Route("")]
         [HttpPut]
-        [ResponseType(typeof(Response<tb_vehiculo>))]
+        [ResponseType(typeof(Response<Boolean>))]
         public IHttpActionResult UpdateVehiculo([FromBody]tb_vehiculo vehiculo)
         {
-            ControlVehiculo controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
+            Response<Boolean> response = new Response<bool>();
 
+            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
             return Json(controlVehiculo.lfUpdate(vehiculo), new JsonSerializerSettings()
             {
                 PreserveReferencesHandling = PreserveReferencesHandling.Objects,
@@ -93,5 +62,36 @@ namespace IngenieriaTarea.Controllers
             });
         }
 
+        [Route("")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_vehiculo>>))]
+        public IHttpActionResult GetVehiculo()
+        {
+            Response<List<tb_vehiculo>> response = new Response<List<tb_vehiculo>>();
+
+            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
+
+            return Json(controlVehiculo.lfGet(), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        [ResponseType(typeof(Response<List<tb_vehiculo>>))]
+        public IHttpActionResult GetVehiculo(int id)
+        {
+            Response<List<tb_vehiculo>> response = new Response<List<tb_vehiculo>>();
+
+            var controlVehiculo = FactoryIoC.Container.Resolver<ControlVehiculo>();
+
+            return Json(controlVehiculo.lfGet(id), new JsonSerializerSettings()
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+                Formatting = Formatting.Indented
+            });
+        }
     }
 }

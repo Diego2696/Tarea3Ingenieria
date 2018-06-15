@@ -6,6 +6,7 @@ using Infraestructure.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,13 +23,31 @@ namespace Application.Implementation
             DomainObjeto = new RepositoryObjeto();
         }
 
+        public Response<bool> lfDelete(int idTemp)
+        {
+            Response<bool> response = new Response<bool>();
+            try
+            {
+                tb_objeto objeto = new tb_objeto();
+                objeto.id = idTemp;
+                response.ReturnValue = DomainObjeto.Delete(objeto);
+            }
+            catch (Exception ex)
+            {
+                response.blnTransactionIndicator = false;
+                response.ReturnValue = false;
+                response.strOrigin = ex.ToString();
+            }
+            return response;
+        }
+
         public Response<List<tb_objeto>> lfGet()
         {
             Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
 
             try
             {
-                response.ReturnValue = DomainObjeto.GetObjeto();
+                response.ReturnValue = DomainObjeto.GetAll().ToList<tb_objeto>();
             }
             catch (Exception ex)
             {
@@ -39,13 +58,14 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_objeto> lfGet(int idTemp)
+        public Response<List<tb_objeto>> lfGet(int id)
         {
-            Response<tb_objeto> response = new Response<tb_objeto>();
+            Response<List<tb_objeto>> response = new Response<List<tb_objeto>>();
 
             try
             {
-                response.ReturnValue = DomainObjeto.GetObjetoById(new tb_objeto { id = idTemp });
+                Expression<Func<tb_objeto, bool>> comparation = c => c.id == id;
+                response.ReturnValue = DomainObjeto.FindBy(comparation).ToList<tb_objeto>();
             }
             catch (Exception ex)
             {
@@ -56,46 +76,30 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_objeto> lfInsert(tb_objeto objeto)
-        {
-            Response<tb_objeto> response = new Response<tb_objeto>();
-
-            try
-            {
-                response.ReturnValue = DomainObjeto.AddObjeto(objeto);
-            }
-            catch (Exception ex)
-            {
-                response.blnTransactionIndicator = false;
-                response.ReturnValue = null;
-                response.strOrigin = ex.ToString();
-            }
-            return response;
-        }
-
-        public Response<tb_objeto> lfUpdate(tb_objeto objeto)
-        {
-            Response<tb_objeto> response = new Response<tb_objeto>();
-
-            try
-            {
-                response.ReturnValue = DomainObjeto.UpdateObjeto(objeto);
-            }
-            catch (Exception ex)
-            {
-                response.blnTransactionIndicator = false;
-                response.ReturnValue = null;
-                response.strOrigin = ex.ToString();
-            }
-            return response;
-        }
-
-        public Response<bool> lfDelete(int idTemp)
+        public Response<bool> lfInsert(tb_objeto objeto)
         {
             Response<bool> response = new Response<bool>();
+
             try
             {
-                response.ReturnValue = DomainObjeto.DeleteObjeto(new tb_objeto { id = idTemp });
+                response.ReturnValue = DomainObjeto.Add(objeto);
+            }
+            catch (Exception ex)
+            {
+                response.blnTransactionIndicator = false;
+                response.ReturnValue = false;
+                response.strOrigin = ex.ToString();
+            }
+            return response;
+        }
+
+        public Response<bool> lfUpdate(tb_objeto objeto)
+        {
+            Response<bool> response = new Response<bool>();
+
+            try
+            {
+                response.ReturnValue = DomainObjeto.Update(objeto);
             }
             catch (Exception ex)
             {

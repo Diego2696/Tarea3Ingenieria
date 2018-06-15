@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IRepositoryColor.cs" />
     <Compile Include="IRepositoryInformacionBasica.cs" />
     <Compile Include="IRepositoryObjeto.cs" />
     <Compile Include="IRepositoryPerson.cs" />

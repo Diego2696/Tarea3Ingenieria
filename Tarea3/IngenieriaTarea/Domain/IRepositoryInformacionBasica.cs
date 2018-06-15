@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IRepositoryInformacionBasica
+    public interface IRepositoryInformacionBasica : IGenericRepository<tb_informacion_basica>
     {
-        List<tb_informacion_basica> GetInfoBasica();
-        tb_informacion_basica GetInfoBasicaById(tb_informacion_basica infoBasica);
-        tb_informacion_basica AddInfoBasica(tb_informacion_basica infoBasica);
-        tb_informacion_basica UpdateInfoBasica(tb_informacion_basica infoBasica);
-        Boolean DeleteInfoBasica(tb_informacion_basica infoBasica);
     }
 }

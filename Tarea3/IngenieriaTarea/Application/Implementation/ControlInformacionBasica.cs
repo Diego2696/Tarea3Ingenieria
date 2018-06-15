@@ -6,6 +6,7 @@ using Infraestructure.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,13 +23,31 @@ namespace Application.Implementation
             DomainInfoBasica = new RepositoryInformacionBasica();
         }
 
+        public Response<bool> lfDelete(int idTemp)
+        {
+            Response<bool> response = new Response<bool>();
+            try
+            {
+                tb_informacion_basica infoBasica = new tb_informacion_basica();
+                infoBasica.id = idTemp;
+                response.ReturnValue = DomainInfoBasica.Delete(infoBasica);
+            }
+            catch (Exception ex)
+            {
+                response.blnTransactionIndicator = false;
+                response.ReturnValue = false;
+                response.strOrigin = ex.ToString();
+            }
+            return response;
+        }
+
         public Response<List<tb_informacion_basica>> lfGet()
         {
             Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
 
             try
             {
-                response.ReturnValue = DomainInfoBasica.GetInfoBasica();
+                response.ReturnValue = DomainInfoBasica.GetAll().ToList<tb_informacion_basica>();
             }
             catch (Exception ex)
             {
@@ -39,13 +58,14 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_informacion_basica> lfGet(int idTemp)
+        public Response<List<tb_informacion_basica>> lfGet(int id)
         {
-            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
+            Response<List<tb_informacion_basica>> response = new Response<List<tb_informacion_basica>>();
 
             try
             {
-                response.ReturnValue = DomainInfoBasica.GetInfoBasicaById(new tb_informacion_basica { id = idTemp });
+                Expression<Func<tb_informacion_basica, bool>> comparation = c => c.id == id;
+                response.ReturnValue = DomainInfoBasica.FindBy(comparation).ToList<tb_informacion_basica>();
             }
             catch (Exception ex)
             {
@@ -56,46 +76,30 @@ namespace Application.Implementation
             return response;
         }
 
-        public Response<tb_informacion_basica> lfInsert(tb_informacion_basica infoBasica)
-        {
-            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
-
-            try
-            {
-                response.ReturnValue = DomainInfoBasica.AddInfoBasica(infoBasica);
-            }
-            catch (Exception ex)
-            {
-                response.blnTransactionIndicator = false;
-                response.ReturnValue = null;
-                response.strOrigin = ex.ToString();
-            }
-            return response;
-        }
-
-        public Response<tb_informacion_basica> lfUpdate(tb_informacion_basica infoBasica)
-        {
-            Response<tb_informacion_basica> response = new Response<tb_informacion_basica>();
-
-            try
-            {
-                response.ReturnValue = DomainInfoBasica.UpdateInfoBasica(infoBasica);
-            }
-            catch (Exception ex)
-            {
-                response.blnTransactionIndicator = false;
-                response.ReturnValue = null;
-                response.strOrigin = ex.ToString();
-            }
-            return response;
-        }
-
-        public Response<bool> lfDelete(int idTemp)
+        public Response<bool> lfInsert(tb_informacion_basica infoBasica)
         {
             Response<bool> response = new Response<bool>();
+
             try
             {
-                response.ReturnValue = DomainInfoBasica.DeleteInfoBasica(new tb_informacion_basica { id = idTemp });
+                response.ReturnValue = DomainInfoBasica.Add(infoBasica);
+            }
+            catch (Exception ex)
+            {
+                response.blnTransactionIndicator = false;
+                response.ReturnValue = false;
+                response.strOrigin = ex.ToString();
+            }
+            return response;
+        }
+
+        public Response<bool> lfUpdate(tb_informacion_basica infoBasica)
+        {
+            Response<bool> response = new Response<bool>();
+
+            try
+            {
+                response.ReturnValue = DomainInfoBasica.Update(infoBasica);
             }
             catch (Exception ex)
             {
