@@ -62,7 +62,6 @@
       <DependentUpon>IngenieriaTareaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\RepositoryColor.cs" />
     <Compile Include="Repository\RepositoryInformacionBasica.cs" />
     <Compile Include="Repository\RepositoryObjeto.cs" />
@@ -71,6 +70,10 @@
     <Compile Include="Repository\RepositoryVehiculo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{9E714A8D-DDD0-49F3-8376-F20AEDC3AF15}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
       <Project>{9B8D7D20-D7CB-4D01-AA6A-9168A3A1B131}</Project>
       <Name>Domain.Entities</Name>
@@ -78,6 +81,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{9E090995-D405-4235-A602-8C3EDC297DE0}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructure.Core\Infraestructure.Core.csproj">
+      <Project>{6BCDEA9F-0ECE-4584-B3F7-469B0B71A170}</Project>
+      <Name>Infraestructure.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

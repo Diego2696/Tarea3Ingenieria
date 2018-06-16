@@ -1,0 +1,12 @@
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\Infraestructure.Core.dll.config
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\Infraestructure.Core.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\Infraestructure.Core.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\Domain.Core.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\EntityFramework.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\Domain.Core.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\EntityFramework.xml
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\obj\Debug\Infraestructure.Core.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\obj\Debug\Infraestructure.Core.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.Core\obj\Debug\Infraestructure.Core.pdb

@@ -30,7 +30,9 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Infraestruc
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.IoC.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.IoC.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\CommonServiceLocator.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Domain.Core.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Domain.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.Core.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.Data.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Unity.Abstractions.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Unity.Configuration.dll
@@ -41,7 +43,9 @@ C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\In
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Unity.ServiceLocation.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Domain.Entities.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\EntityFramework.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Domain.Core.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Domain.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.Core.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Infraestructure.Data.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\CommonServiceLocator.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Infraestructure.IoC\bin\Debug\Unity.Abstractions.pdb

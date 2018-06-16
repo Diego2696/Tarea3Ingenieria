@@ -7,7 +7,9 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain\obj\
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\IngenieriaTarea\Domain\obj\Debug\Domain.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.Core.dll
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.Entities.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.Core.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\bin\Debug\Domain.Entities.pdb
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain\obj\Debug\Domain.dll

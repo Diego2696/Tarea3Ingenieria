@@ -1,0 +1,4 @@
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Core\bin\Debug\Domain.Core.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Core\bin\Debug\Domain.Core.pdb
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Core\obj\Debug\Domain.Core.dll
+C:\Program Files (x86)\EasyPHP-Devserver-16.1\eds-www\Tarea3Ingenieria\Tarea3\IngenieriaTarea\Domain.Core\obj\Debug\Domain.Core.pdb

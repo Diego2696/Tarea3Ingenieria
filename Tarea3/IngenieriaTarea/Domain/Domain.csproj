@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IGenericRepository.cs" />
     <Compile Include="IRepositoryColor.cs" />
     <Compile Include="IRepositoryInformacionBasica.cs" />
     <Compile Include="IRepositoryObjeto.cs" />
@@ -50,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{9E714A8D-DDD0-49F3-8376-F20AEDC3AF15}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
       <Project>{9B8D7D20-D7CB-4D01-AA6A-9168A3A1B131}</Project>
       <Name>Domain.Entities</Name>

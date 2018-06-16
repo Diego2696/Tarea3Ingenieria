@@ -79,9 +79,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{9E714A8D-DDD0-49F3-8376-F20AEDC3AF15}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{9E090995-D405-4235-A602-8C3EDC297DE0}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructure.Core\Infraestructure.Core.csproj">
+      <Project>{6BCDEA9F-0ECE-4584-B3F7-469B0B71A170}</Project>
+      <Name>Infraestructure.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infraestructure.Data\Infraestructure.Data.csproj">
       <Project>{466F6163-DCCB-4243-BED0-F15CCEC427A9}</Project>
