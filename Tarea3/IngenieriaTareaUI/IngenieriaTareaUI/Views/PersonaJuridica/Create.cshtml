@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Persona Juridica";
+}
+<h1 style="text-align:center; color:forestgreen">PersonaJuridica</h1>
+<br />
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <form>
+            <div class="col-md-12">
+                <label>Rol</label>
+                <select id="rol">
+                    <option value="Ofendida">Ofendida</option>
+                    <option value="Imputada/Sospechosa">Imputada/Sospechosa</option>
+                    <option value="Utilizada">Utilizada</option>
+                    <option value="Denunciante">Denunciante</option>
+                    <option value="SinClasificar">Sin Clasificar</option>
+                </select>
+            </div>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    <label>Cedula Juridica: </label>
+                    <input type="text" id="cedulaJuridica" placeholder="Cedula Juridica" />
+                </div>
+                <div class="col-md-5">
+                    <label>Nombre Entidad: </label>
+                    <input type="text" id="nombreEntidad" placeholder="Nombre Entidad" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    <label>Razon Social: </label>
+                    <input type="text" id="razonSocial" placeholder="Razon Social" />
+                </div>
+                <div class="col-md-5">
+                    <label>Intensidad</label>
+                    <select id="intensidad">
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+            </div>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    <label>Nombre Fantasia</label>
+                    <select id="nombreFantasia">
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label>Atributo: </label>
+                    <input type="text" id="atributo" placeholder="atributo" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    <label>Filial: </label>
+                    <input type="text" id="filial" placeholder="Filial" style="max-width:100%;" />
+                </div>
+                <div class="col-md-5">
+                    <label>Allanada</label>
+                    <select id="allanada">
+                        <option value="SinDefinir">Sin definir</option>
+                        <option value="Allanada">Allanada</option>
+                    </select>
+                </div>
+            </div>
+            <br /><br /><br />
+            <div class="col-md-12" style="max-width:100%;">
+                <label>Observaciones</label>
+                <input type="text" id="observaciones" placeholder="observaciones" style="width:100%; height: 2em;" />
+            </div>
+            <br /><br />
+            <div class="col-md-12" style="max-width:100%;">
+                <input type="submit" id="insertar" value="Create" />
+            </div>
+        </form>
+    </div>
+    <br />
+</div>
+<div>
+    @Html.ActionLink("Regresar", "Index", "Home")
+</div>
+
